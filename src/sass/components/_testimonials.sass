@@ -8,8 +8,8 @@
 		&-item
 			position: relative
 			padding-top: 131%
-			cursor: grab
 			z-index: 0
+			cursor: grab
 		&-title
 			position: absolute
 			top: 10%
@@ -26,14 +26,26 @@
 			+coverdiv
 			+cover
 			z-index: -1
-			
-		&-btn
+		&-link
 			position: absolute
 			left: 50%
 			bottom: 12%
 			transform: translateX(-50%)
 			z-index: 1
-			
+		&-icon
+			font-size: 43px
+			fill: none
+			stroke: $grey
+		&-btn
+			position: absolute
+			top: calc(50% - 7px)
+			z-index: 1
+			padding: 5px
+			cursor: pointer
+			&_prev
+				left: 30px
+			&_next
+				right: 30px
 	&__block
 		&-item
 			position: relative
@@ -58,7 +70,7 @@
 			&_r
 				right: 0
 				bottom: 0
-				
+		
 		&-bottom
 			margin: 30px 0
 			text-align: center

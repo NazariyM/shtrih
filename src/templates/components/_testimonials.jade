@@ -11,7 +11,7 @@ if testimonials ? testimonials : testimonials = []
 							if testSldItem.markTitle
 								+e.MARK= testSldItem.markTitle
 						+e.slider-img(style='background-image: url(img/content/#{testSldItem.img}.jpg)')
-						+e.slider-btn.btn(href='#!')= testSldItem.btn
+						+e.slider-link.btn(href='#!')= testSldItem.btn
 				each testSldItem in testSliderList
 					+testimonialsSliderItem(testSldItem)
 
