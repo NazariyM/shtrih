@@ -1,0 +1,64 @@
+.testimonials
+	&__container
+		+clr
+	&__col
+		float: left
+		width: 50%
+	&__slider
+		&-item
+			position: relative
+			padding-top: 131%
+			cursor: grab
+			z-index: 0
+		&-title
+			position: absolute
+			top: 10%
+			left: 0
+			right: 0
+			z-index: 1
+			padding: 0 15px
+			text-align: center
+			mark
+				display: block
+				color: $red
+				background: transparent
+		&-img
+			+coverdiv
+			+cover
+			z-index: -1
+			
+		&-btn
+			position: absolute
+			left: 50%
+			bottom: 12%
+			transform: translateX(-50%)
+			z-index: 1
+			
+	&__block
+		&-item
+			position: relative
+			padding: 15px
+			border-bottom: 1px dashed #e0e1e2
+		&-link
+			font-size: 12px
+			font-weight: 700
+		&-name
+			display: inline-block
+			vertical-align: middle
+			margin-left: 25px
+			font-weight: 500
+		&-row
+			margin-top: 10px
+		&-quote
+			position: absolute
+			fill: $red
+			&_l
+				top: 0
+				left: 0
+			&_r
+				right: 0
+				bottom: 0
+				
+		&-bottom
+			margin: 30px 0
+			text-align: center

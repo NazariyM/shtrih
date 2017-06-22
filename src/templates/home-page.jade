@@ -1,0 +1,63 @@
+---
+title: Index Page
+---
+extends layouts/_layout
+block content
+	+b.MAIN
+		// begin screen-slider
+		+b.screen-sld
+			+e.IMG(src='img/screen-sld.jpg' style='display: block; margin: 0 auto')
+		// end screen-slider
+
+		//- benefits
+		-
+			var benefits = {classMod: '_default js-next-section', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
+			var benefitsList = [{
+			picMod: 'tape',
+			title: '21 год',
+			subTitle: 'в отрасли',
+			descrTop: 'Компания "Штрих.ру"',
+			descrBot: 'на рынке с 1996 года.'
+			},{
+			picMod: 'peoples',
+			title: '83',
+			subTitle: 'специалиста',
+			descrTop: 'Высококвалифицированный и',
+			descrBot: 'компетентный персонал компании'
+			},{
+			picMod: 'building',
+			title: '3',
+			subTitle: 'города',
+			descrTop: 'Мы открыли офисы продаж',
+			descrBot: 'в разных городах'
+			},{
+			picMod: 'vehicle',
+			title: '52 региона',
+			subTitle: 'отгрузки',
+			descrTop: 'Доставляем продкуцию',
+			descrBot: 'по регионам'
+			}
+			,{
+			picMod: 'handshake',
+			title: '967',
+			subTitle: 'компаний',
+			descrTop: 'Работают с нами',
+			descrBot: 'на постоянной основи'
+			}];
+		include components/_benefits
+
+		//- testimonials
+		-
+			var testimonials = {classMod: '_default sect-bg js-next-section'}
+			var testSliderList = [{
+			title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ',
+			markTitle: 'В 100% СЛУЧАЯХ',
+			img: 'testimonials-1',
+			btn: 'смотреть все работы'
+			},{
+			title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ',
+			markTitle: 'В 100% СЛУЧАЯХ',
+			img: 'testimonials-2',
+			btn: 'смотреть все работы'
+			}];
+		include components/_testimonials

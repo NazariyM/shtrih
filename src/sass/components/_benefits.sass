@@ -1,0 +1,44 @@
+.benefits
+	&__title
+		text-align: center
+	&__list
+		margin: 20px 0
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		padding: 0 20px 30px
+		text-align: center
+		width: 33.33333%
+		&-pic
+			height: 100px
+			+vertical
+			&::after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				margin: 0 auto
+			&_tape::after
+				+s('tape')
+			&_peoples::after
+				+s('peoples')
+			&_building::after
+				+s('building')
+			&_vehicle::after
+				+s('vehicle')
+			&_handshake::after
+				+s('handshake')
+		&-title
+			font-size: 22px
+			font-weight: 700
+			color: $black
+		&-sub-title
+			font-size: 16px
+			font-weight: 500
+			color: $grey
+		&-descr
+			font-size: 16px
+			color: $grey
+	&_default
+		padding: 65px 0

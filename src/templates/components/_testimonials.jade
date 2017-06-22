@@ -1,0 +1,31 @@
+if testimonials ? testimonials : testimonials = []
+
+//begin testimonials
++b.SECTION.testimonials(class= testimonials.classMod ? testimonials.classMod : '')
+	+e.container.container
+		+e.col
+			+e.slider.js-testimonials-slider.owl-carousel
+				mixin testimonialsSliderItem(testSldItem)
+					+e.slider-item
+						+e.H3.slider-title.title-md= testSldItem.title
+							if testSldItem.markTitle
+								+e.MARK= testSldItem.markTitle
+						+e.slider-img(style='background-image: url(img/content/#{testSldItem.img}.jpg)')
+						+e.slider-btn.btn(href='#!')= testSldItem.btn
+				each testSldItem in testSliderList
+					+testimonialsSliderItem(testSldItem)
+
+		+e.block.testimonials__col
+			-var i=0
+			while i < 3
+				+e.block-item
+					+e.BLOCKQUOTE.block-text Изготовление буклетов – это услуга, которая пользуется большим спросом в связи высокой эффективностью данного вида полиграфии. Буклет – это разновидность печатной продукции, представляющая собой.
+					+e.block-row
+						+e.A.block-link.link._upper(href='#!') смотреть оригинал
+						+e.block-name ОАО "ПК "БАЛТИКА"
+					+icon('icon-quote_l', 'testimonials__block-quote testimonials__block-quote_l')
+					+icon('icon-quote_r', 'testimonials__block-quote testimonials__block-quote_r')
+				-i++
+			+e.block-bottom
+				+b.A(href='#!').btn смотреть все отзывы
+//end testimonials
