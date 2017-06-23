@@ -1,13 +1,26 @@
 .header
 	padding: 62px 0 25px
 	color: $black
+	+md
+		padding: 20px 0
+	+xs
+		position: relative
 	&__container
 		font-size: 0
+		text-align: center
+		+xs
+			display: flex
+			flex-wrap: wrap
 	&__col
 		position: relative
 		display: inline-block
 		vertical-align: middle
 		padding: 0 17px
+		+md
+			padding: 0 8px
+		+xs
+			padding: 0
+			z-index: 11
 		&:first-child
 			padding-left: 0
 		&:last-child::after
@@ -20,38 +33,70 @@
 			background: #e6e7e8
 			height: 41px
 			width: 1px
+			+xs
+				display: none
+		&:nth-child(1)
+			+xs
+				flex-basis: 100%
+				margin-bottom: 10px
+		&:nth-child(3)
+			+sm
+				display: none
+			+xs
+				display: block
 	&__phone::after
 		top: 5px
 	&__logo
 		display: block
 		+s('logo')
 	&__phone
-		text-align: center
 		&-link
 			display: block
 			font-size: 22px
 			font-weight: 500
+			+xs
+				line-height: 1
+				font-size: 20px
 		&-text
 			color: $grey
 			font-size: 13px
 			font-weight: 300
 	&__bar
 		padding-right: 0
+		+md
+			padding-right: 0
+		+sm
+			padding-right: 0
+		+xs
+			display: flex
+			align-items: flex-end
+			padding-bottom: 5px
+			margin-left: auto
 		&-col
 			position: relative
 			display: inline-block
 			vertical-align: middle
 			padding-right: 39px
+			+md
+				padding-right: 22px
+			+sm
+				padding-right: 12px
 			&::after
 				@extend .header__col::after
 				right: 18px
 				top: -9px
+				+md
+					right: 13px
+				+sm
+					display: none
 			&:last-child
 				padding-right: 0
 			&:last-child::after
 				display: none
 			&:nth-child(2)::after
 				top: -8px
+				+md
+					right: 9px
 		&-link
 			position: relative
 			display: block
@@ -80,6 +125,23 @@
 	
 .nav
 	font-size: 0
+	&.is-open
+		pointer-events: auto
+		opacity: 1
+	+xs
+		pointer-events: none
+		opacity: 0
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 10
+		display: flex
+		justify-content: center
+		flex-direction: column
+		+tr(opacity .4s ease)
+		background: $white
 	&__link
 		position: relative
 		display: inline-block
@@ -88,6 +150,11 @@
 		font-size: 16px
 		font-weight: 700
 		border-bottom: 2px solid  #e7e8e9
+		+xs
+			display: block
+			padding: 30px 10px
+			font-size: 18px
+			line-height: 1
 		&::after
 			content: ''
 			position: absolute
@@ -97,12 +164,19 @@
 			background: #e7e8e9
 			height: 2px
 			+tr(.3s ease)
-		&:hover::after
-			left: 0
-			right: 0
-			background: $red
+		+hover
+			&::after
+				left: 0
+				right: 0
+				background: $red
 		&:not(:last-child)
 			margin-right: 33px
+			+md
+				margin-right: 16px
+			+sm
+				margin-right: 10px
+			+xs
+				margin-right: 0
 		&.is-active
 			border-bottom-color: $red
 			&::after

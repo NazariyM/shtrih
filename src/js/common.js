@@ -7,3 +7,14 @@
     $('html, body').animate({ scrollTop: $closestSect }, '300');
   });
 }());
+
+(function initMenuToggle() {
+  const $menuBtn = $('.js-nav-toggle');
+  const $menu = $menuBtn.next().find('.nav');
+  $menuBtn.on('click', function (ev) {
+    ev.preventDefault();
+    const $this = $(this);
+    $this.toggleClass('is-active');
+    $menu.toggleClass('is-open');
+  });
+}());
