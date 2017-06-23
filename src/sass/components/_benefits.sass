@@ -1,12 +1,12 @@
 .benefits
 	&__list
-		margin: 20px 0
+		margin: 53px 0
 		font-size: 0
 		text-align: center
 	&__item
 		display: inline-block
 		vertical-align: top
-		padding: 0 20px 30px
+		padding: 0 20px 40px
 		text-align: center
 		width: 33.33333%
 		&-pic
@@ -24,14 +24,18 @@
 			&_building::after
 				+s('building')
 			&_vehicle::after
+				vertical-align: bottom
 				+s('vehicle')
 			&_handshake::after
 				+s('handshake')
 		&-title
+			margin-bottom: 5px
 			font-size: 22px
 			font-weight: 700
+			line-height: 1
 			color: $black
 		&-sub-title
+			margin-bottom: 5px
 			font-size: 16px
 			font-weight: 500
 			color: $grey
@@ -39,4 +43,4 @@
 			font-size: 16px
 			color: $grey
 	&_default
-		padding: 65px 0
+		padding: 65px 0 40px

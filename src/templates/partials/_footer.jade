@@ -1,0 +1,83 @@
+// begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.col
+			+e.title.title-sm Штрих.ру
+			+e.UL.list
+				+e.LI
+					+e.A(href='#!') О компании
+				+e.LI
+					+e.A(href='#!') Наши сотрудники
+				+e.LI
+					+e.A(href='#!') Портфолио
+				+e.LI
+					+e.A(href='#!') Новости
+				+e.LI
+					+e.A(href='#!') Контакты
+				+e.LI
+					+e.A(href='#!') Доставка
+				+e.LI
+					+e.A(href='#!') Спец. условия для РА
+
+		+e.col
+			+e.title.title-sm НАШИ УСЛУГИ
+			+e.UL.list
+				+e.LI
+					+e.A(href='#!') Производство календарей
+				+e.LI
+					+e.A(href='#!') Поставка сувенирной продукции
+				+e.LI
+					+e.A(href='#!') Нанесение логотипа
+				+e.LI
+					+e.A(href='#!') Услуги полиграфии
+				+e.LI
+					+e.A(href='#!') Разработка фирменного стиля
+
+		+e.col
+			+e.title.title-sm помощь по сайту
+			+e.UL.list
+				+e.LI
+					+e.A(href='#!') Как купить?
+				+e.LI
+					+e.A(href='#!') Как пользоваться личным кабинетом?
+				+e.LI
+					+e.A(href='#!') Вопросы и ответы
+				+e.LI
+					+e.A(href='#!') Задать вопрос
+
+		+e.col.ADDRESS.footer__address
+			+e.title.title-sm Связаться с нами
+			+e.address-item
+				+e.address-city МОСКВА
+				+e.address-str Адрес: ул. Яккиманка 45/3
+				+e.A.address-tel(href='tel:84991971970') 8-499 197-19-70
+			+e.address-item
+				+e.address-city САМАРА
+				+e.address-str Адрес: ул. Яккиманка 45/3
+				+e.A.address-tel(href='tel:88462658080') 8-846 265-80-80
+			+e.address-item
+				+e.address-city ТОЛЬЯТТИ
+				+e.address-str Адрес: ул. Яккиманка 45/3
+				+e.A.address-tel(href='tel:88482704040') 8-8482 70-40-40
+			+e.address-item
+				+e.address-city САРАТОВ
+				+e.address-str Адрес: ул. Яккиманка 45/3
+				+e.A.address-tel(href='tel:88452338690') 8-8452 33-86-90
+
+		+e.col
+			+e.title.title-sm МЫ В СЕТИ
+			//-socials
+			-var socialsList = [{picClass: 'fb'}, {picClass: 'tw'}, {picClass: 'vk'}, {picClass: 'inst'}];
+			include ../components/_socials
+			+e.A(href='#!').mail-link.link sales@shtrih.ru
+			+e.A(href='#!').write-btn.btn НАПИСАТЬ
+			+e.A(href='#!').dev-link Сделано руками
+				+e.SPAN Актиком
+
+		+e.copy
+			+e.P © 2017 ООО «Штрих Ру», Типография.
+				= ' '
+				+e.A(href='#!') sales@shtrih.ru
+			+e.P Москва, Самара, Саратов, Тольятти.
+			+e.P Использование материалов сайта типографии Штрих Ру без письменного разрешения запрещено.
+// end footer

@@ -31,6 +31,10 @@ img
 	text-transform: uppercase
 	text-align: center
 	color: $black
+.title-sm
+	@extend .title-md
+	font-size: 16px
+	font-weight: 900
 
 .link
 	color: $red
@@ -40,21 +44,49 @@ img
 	&_upper
 		text-transform: uppercase
 		
-.input
-	height: 45px
-	line-height: 45px
-	border-radius: 3px
-	border: 2px solid #cbcdce
-	background-color: $white
+// inputs
+.input-style
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 20px
+		transform: translateY(-50%)
+	input
+		height: 46px
+		border-radius: 3px
+		border: 2px solid #cbcdce
+		background-color: $white
+		font-family: 'Roboto', Arial, sans-serif
+		font-size: 14px
+		font-weight: 300
+		width: 100%
+		+placeholder-color($grey)
+	&_name, &_email
+		input
+			padding: 0 10px 0 47px
+	&_name::before
+		+s('user-sm')
+	&_email::before
+		+s('mail-sm')
+		
+.textarea-style
+	display: block
+	width: 100%
+	padding: 10px 15px
+	resize: none
 	font-family: 'Roboto', Arial, sans-serif
 	font-size: 14px
 	font-weight: 300
-	+placeholder-color($grey)
+	border-radius: 3px
+	border: 2px solid #cbcdce
 	
+// btns
 .btn
 	display: inline-block
 	height: 45px
-	padding: 0 24px
+	padding: 0 18px
 	border-radius: 2px
 	background-color: $white
 	border: 2px solid $red
@@ -62,27 +94,39 @@ img
 	outline-offset: -2px
 	transition: all .7s cubic-bezier(0.19, 1, 0.22, 1)
 	text-transform: uppercase
+	text-align: center
 	color: $black
 	font-size: 14px
 	font-weight: 700
 	line-height: 44px
+	letter-spacing: .06em
 	cursor: pointer
 	+hover
 		outline-color: rgba(255, 255, 255, 0)
 		outline-offset: 12px
 		background: $red
 		color: $white
+	&_red
+		padding: 0 39px
+		height: 50px
+		line-height: 48px
+		background: $red
+		color: $white
+		letter-spacing: 0
+		+hover
+			background: $white
+			color: $black
 			
 .sect-bg
 	background: url('../img/bg/sect-bg.jpg') repeat 50% 50%
 
+// scroll sect
 .js-next-section
 	position: relative
-
 .next-section
 	position: absolute
 	left: calc(50% - 12px)
-	bottom: 40px
+	bottom: 5%
 	z-index: 1
 	background: 0 0
 	&__icon

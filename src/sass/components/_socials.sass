@@ -1,0 +1,18 @@
+.socials
+	font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: middle
+		+tr(opacity .3s)
+		+hover
+			opacity: .7
+		&:not(:last-child)
+			margin-right: 15px
+		&_fb
+			+s('fb')
+		&_tw
+			+s('tw')
+		&_vk
+			+s('vk')
+		&_inst
+			+s('inst')

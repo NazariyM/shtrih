@@ -4,16 +4,17 @@ if ask ? ask : ask = []
 +b.SECTION.ask(class= ask.classMod ? ask.classMod : '')
 	+e.container.container
 		+b.H3.title-md= ask.title
-		+e.descr= ask.descr
+		+e.P.descr= ask.descr
 		+e.FORM(action='#!')
-			+e.form
+			+e.form-in
 				+e.form-col
-					+e.form-field._name
-						+e.INPUT.input.input(type='text' placeholder='Ваше имя' name='')
-					+e.form-field._mail
-						+e.INPUT.input.input(type='email' placeholder='Ваш e-mail' name='')
+					+e.form-field.input-style._name
+						+e.INPUT.input(type='text' placeholder='Ваше имя' name='' required)
+					+e.form-field.input-style._email
+						+e.INPUT.input(type='email' placeholder='Ваш e-mail' name='' required)
 				+e.form-col
-					+e.TEXTAREA
+					+e.TEXTAREA.form-message.textarea-style(placeholder='Ваш комментарий')
 				+e.form-col
-
+					+e.BUTTON.submit-btn.btn._red(type='submit') Отправить
+					+e.P.form-descr Мы обработаем Ваш запрос и дадим ответ в течение одного рабочего дня.
 //end ask
