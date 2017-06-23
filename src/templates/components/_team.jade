@@ -1,9 +1,106 @@
 if team ? team : team = []
 
 //begin team
-+b.team(class= team.classMod ? team.classMod : '')
++b.SECTION.team(class= team.classMod ? team.classMod : '')
 	.container
-		+e.H3.title.title-md= team.title
+		+b.H3.title-md= team.title
 		+e.in
+			+e.col.team__lead
+				+e.lead-pic(style='background-image: url(img/content/team-lead.jpg)')
+				+e.lead-text
+					+e.lead-title Уважаемые заказчики!
+					+e.P.lead-descr Рекламное агентство "Штрих Ру" – одно из крупнейших универсальных полиграфическое предприятий в России. Обладает современной производственной базой, позволяющей производить широкий спектр полиграфической продукции любого тиража в секторе B2B
+					+e.lead-name С уважением, Станислав Штрих!
+					+icon('icon-quote_l', 'team__lead-quote team__lead-quote_l')
+					+icon('icon-quote_r', 'team__lead-quote team__lead-quote_r')
+			+e.col.team__slider.js-team-slider.owl-carousel
+				+e.slider-item
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-1.jpg')
+						+e.person-data
+							+e.person-name Косова Ирина
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-5.jpg')
+						+e.person-data
+							+e.person-name Косова Ирина
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
 
+				+e.slider-item
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-2.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-1.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+
+				+e.slider-item
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-3.jpg')
+						+e.person-data
+							+e.person-name Косова Ирина
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-2.jpg')
+						+e.person-data
+							+e.person-name Косова Ирина
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+
+				+e.slider-item
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-4.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-3.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+
+				+e.slider-item
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-2.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/team-1.jpg')
+						+e.person-data
+							+e.person-name Екатерина Иванова
+							+e.person-position Оператор
+							+e.A.person-tel(href='tel:+79066561015') +7 (906) 656-10-15
+							+e.A.person-mail.link(href='mailto:info@shtrih.ru') info@shtrih.ru
 //end team

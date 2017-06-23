@@ -14,6 +14,7 @@ a
 
 img
 	display: block
+	width: 100%
 
 .out
 	overflow: hidden
@@ -28,16 +29,28 @@ img
 	font-weight: 500
 	line-height: (52/32)
 	text-transform: uppercase
+	text-align: center
 	color: $black
 
 .link
 	color: $red
-	border-bottom: 1px solid $red
+	text-decoration: underline
 	+hover
-		border-bottom-color: transparent
+		text-decoration: none
 	&_upper
 		text-transform: uppercase
-
+		
+.input
+	height: 45px
+	line-height: 45px
+	border-radius: 3px
+	border: 2px solid #cbcdce
+	background-color: $white
+	font-family: 'Roboto', Arial, sans-serif
+	font-size: 14px
+	font-weight: 300
+	+placeholder-color($grey)
+	
 .btn
 	display: inline-block
 	height: 45px
@@ -74,3 +87,20 @@ img
 	background: 0 0
 	&__icon
 		font-size: 58px
+		
+.owl-carousel
+	&__btn
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+		padding: 5px
+		cursor: pointer
+		&_prev
+			left: 30px
+		&_next
+			right: 30px
+		&-icon
+			font-size: 43px
+			fill: none
+			stroke: $grey

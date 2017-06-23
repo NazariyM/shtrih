@@ -3,7 +3,7 @@ if benefits ? benefits : benefits = []
 //begin benefits
 +b.SECTION.benefits(class= benefits.classMod ? benefits.classMod : '')
 	.container
-		+e.H3.title.title-md= benefits.title
+		+b.H3.title-md= benefits.title
 		+e.list
 			mixin benefitsItem(item)
 				+e.item

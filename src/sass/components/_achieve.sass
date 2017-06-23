@@ -1,0 +1,38 @@
+.achieve
+	&__slider
+		margin: 45px 0 0
+		&-item
+			display: block
+			padding: 5px
+			outline: 2px solid transparent
+			+tr(outline .3s)
+			background: $white
+			font-size: 0
+			+hover
+				outline-color: $red
+		&-text
+			display: inline-block
+			vertical-align: middle
+			width: calc(100% - 120px)
+			padding: 0 15px
+			text-align: center
+			color: $black
+		&-title
+			font-size: 22px
+			font-weight: 500
+		&-descr
+			margin-top: 10px
+			font-size: 15px
+		&-pic
+			display: inline-block
+			vertical-align: middle
+			width: 120px
+			height: 170px
+			img
+				height: 100%
+		.owl-item
+			padding: 2px
+				
+	&_default
+		padding: 70px 0 80px
+		

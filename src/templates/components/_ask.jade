@@ -1,0 +1,19 @@
+if ask ? ask : ask = []
+
+//begin ask
++b.SECTION.ask(class= ask.classMod ? ask.classMod : '')
+	+e.container.container
+		+b.H3.title-md= ask.title
+		+e.descr= ask.descr
+		+e.FORM(action='#!')
+			+e.form
+				+e.form-col
+					+e.form-field._name
+						+e.INPUT.input.input(type='text' placeholder='Ваше имя' name='')
+					+e.form-field._mail
+						+e.INPUT.input.input(type='email' placeholder='Ваш e-mail' name='')
+				+e.form-col
+					+e.TEXTAREA
+				+e.form-col
+
+//end ask

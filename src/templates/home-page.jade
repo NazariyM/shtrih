@@ -6,7 +6,7 @@ block content
 	+b.MAIN
 		// begin screen-slider
 		+b.screen-sld
-			+e.IMG(src='img/screen-sld.jpg' style='display: block; margin: 0 auto')
+			+e.IMG(src='img/screen-sld.jpg' style='display: block; margin: 0 auto; width: auto;')
 		// end screen-slider
 
 		//- benefits
@@ -63,3 +63,21 @@ block content
 		include components/_testimonials
 
 		//- team
+		-
+			var team = {classMod: '_default js-next-section', title: 'НАДЕЖНАЯ КОМАНДА — ЗАЛОГ КАЧЕСТВЕННОЙ УСЛУГИ'}
+		include components/_team
+
+		//- achieve
+		-
+			var achieve = {classMod: '_default sect-bg', title: 'ЗАВОЕВАННЫЕ НАМИ "ВЫСОТЫ"'}
+		include components/_achieve
+
+		//- delivery
+		-
+			var deliveryTeaser = {classMod: '_default js-next-section', title: 'Доставляем более чем по 90 регионам'}
+		include components/_delivery-teaser
+
+		//- ask
+		-
+			var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'}
+		include components/_ask
