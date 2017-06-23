@@ -6,15 +6,15 @@ html
 
   body(class=bodyClass)
     include ../bemto/bemto
-    //BEGIN out
-    .out(class=outClass)
-      block header
+
+    block header
         include ../partials/_header
-      block content
-    //END out
+
+    block content
 
     block footer
       include ../partials/_footer
+
     //LOAD SCRIPTS
     block scripts
       script(type="text/javascript" src="js/app.js")
