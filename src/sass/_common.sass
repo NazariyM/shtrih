@@ -6,6 +6,13 @@ body
 	font-size: 16px
 	line-height: (23/16)
 	color: $grey
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
 
 h1, h2, h3, h4, h5, h6
 	font-weight: normal
@@ -17,9 +24,6 @@ a
 img
 	display: block
 	width: 100%
-
-.out
-	overflow: hidden
 
 .container
 	max-width: 1140px
@@ -33,6 +37,12 @@ img
 	text-transform: uppercase
 	text-align: center
 	color: $black
+	+sm
+		font-size: 26px
+		line-height: 1.3
+	+xs
+		font-size: 22px
+		line-height: 1.2
 .title-sm
 	@extend .title-md
 	font-size: 16px
@@ -132,6 +142,8 @@ img
 	z-index: 1
 	background: 0 0
 	animation: mouse-anim 1s infinite alternate
+	+sm
+		display: none
 	&__icon
 		font-size: 58px
 		

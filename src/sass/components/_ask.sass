@@ -1,23 +1,38 @@
 .ask
 	&__container
 		max-width: 910px
+		+xs
+			max-width: 400px
 	&__descr
 		text-align: center
 		font-size: 20px
 		line-height: 33px
 		color: $black
+		+xs
+			font-size: 17px
 	&__form-in
 		margin-top: 17px
 		margin-left: 75px
+		+sm
+			margin-left: 0
 		+clr
 	&__form-col
 		float: left
 		width: percentage(258 / 805)
+		+xs
+			width: 100%
 		&:nth-child(3)
 			padding-right: 21px
 			text-align: center
+			+sm
+				padding-right: 0
 		& + &
 			margin-left: 15px
+			+sm
+				margin-left: 13px
+			+xs
+				margin-left: 0
+				margin-top: 15px
 	&__form-field
 		& + &
 			margin-top: 15px
@@ -29,4 +44,5 @@
 		
 	&_default
 		padding: 45px 0 60px
-	
+		+sm
+			padding: 40px 0 50px

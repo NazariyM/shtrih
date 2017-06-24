@@ -1,6 +1,12 @@
 .achieve
 	&__slider
-		margin: 35px 0 0
+		margin: 35px auto 0
+		+r(1365)
+			max-width: 930px
+		+sm
+			max-width: 680px
+		+xs
+			max-width: 350px
 		&-item
 			display: block
 			padding: 5px
@@ -18,12 +24,21 @@
 			text-align: center
 			line-height: 1.3
 			color: $black
+			+r(1365)
+				padding: 0 10px
+				font-size: 14px
 		&-title
 			font-size: 22px
 			font-weight: 500
+			+r(1365)
+				font-size: 18px
+			+xs
+				font-size: 16px
 		&-descr
 			margin-top: 5px
 			font-size: 15px
+			+r(424)
+				font-size: 13px
 		&-pic
 			display: inline-block
 			vertical-align: middle
@@ -31,18 +46,39 @@
 			height: 170px
 			img
 				height: 100%
-		.owl-stage
-			display: flex
-			align-items: center
 		.owl-item
 			padding: 3px
 		.owl-carousel__btn_next
 			right: -11.5%
+			+r(1439)
+				right: -9%
+			+r(1365)
+				right: -4%
+			+sm
+				right: -5.5%
+			+xs
+				right: -8.5%
+			+r(424)
+				right: -4.5%
 		.owl-carousel__btn_prev
 			left: -11.5%
+			+r(1439)
+				left: -9%
+			+r(1365)
+				left: -4%
+			+sm
+				left: -5.5%
+			+xs
+				left: -8.5%
+			+r(424)
+				left: -4.5%
 		.owl-carousel__btn-icon, .owl-carousel__btn-icon
 			font-size: 105px
-			
+			+xs
+				font-size: 80px
+			+r(424)
+				font-size: 38px
 	&_default
 		padding: 62px 0 80px
-		
+		+sm
+			padding: 50px 0 60px

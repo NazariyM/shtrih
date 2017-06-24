@@ -3,16 +3,29 @@
 		margin: 53px 0
 		font-size: 0
 		text-align: center
+		+sm
+			margin: 40px 0
+		+xs
+			margin: 25px 0
 	&__item
 		display: inline-block
 		vertical-align: top
 		padding: 0 20px 40px
 		text-align: center
 		width: 33.33333%
+		+sm
+			padding: 0 10px 20px
+		+xs
+			width: 50%
+		+r(599)
+			width: 100%
+			padding: 0 10px 10px
 		&-pic
 			height: 90px
 			margin-bottom: 12px
 			+vertical
+			+sm
+				margin-bottom: 4px
 			&::after
 				content: ''
 				display: inline-block
@@ -35,6 +48,8 @@
 			font-weight: 700
 			line-height: 1
 			color: $black
+			+sm
+				font-size: 19px
 		&-sub-title
 			margin-bottom: 5px
 			font-size: 16px
@@ -45,3 +60,5 @@
 			color: $grey
 	&_default
 		padding: 65px 0 40px
+		+sm
+			padding: 50px 0 10px

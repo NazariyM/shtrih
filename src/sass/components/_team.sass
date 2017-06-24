@@ -2,22 +2,51 @@
 	&__in
 		margin: 45px 0 30px
 		+clr
+		+r(1365)
+			max-width: 840px
+			margin: 35px auto 25px
+		+sm
+			max-width: 660px
 	&__col
 		float: left
+		+xs
+			float: none
 		&:nth-child(1)
 			width: percentage(350 / 1110)
 			margin-right: 30px
+			+r(1365)
+				margin-right: 20px
+				width: 36.5%
+			+sm
+				width: 41.5%
+				margin-right: 15px
+			+xs
+				width: 100%
+				max-width: 320px
+				margin: 0 auto 30px
 		&:nth-child(2)
 			width: percentage(730 / 1110)
+			+r(1365)
+				width: 61%
+			+sm
+				width: 56%
+			+xs
+				width: 100%
+				max-width: 340px
+				margin: 0 auto
 	&__lead
 		&-pic
 			padding-top: 104%
 			+cover
 		&-text
 			position: relative
-			margin: 35px 0 0
+			margin-top: 35px
 			padding: 0 20px 15px 28px
 			font-size: 15px
+			+sm
+				margin-top: 25px
+				padding: 0 16px 15px 20px
+				font-size: 14px
 		&-title
 			color: $black
 			font-weight: 700
@@ -38,25 +67,61 @@
 			font-weight: 500
 			color: $black
 	&__slider
+		&-item
+			+r(424)
+				text-align: center
 		.owl-carousel__btn
 			top: 49%
+			+r(424)
+				top: 33%
 		.owl-carousel__btn_prev
 			left: -71%
+			+r(1439)
+				left: -66%
+			+r(1365)
+				left: -76%
+			+sm
+				left: -91%
+			+xs
+				left: -10%
+			+r(424)
+				left: -4%
 		.owl-carousel__btn_next
 			right: -19%
+			+r(1439)
+				right: -14%
+			+sm
+				right: -12%
+			+xs
+				right: -10%
+			+r(424)
+				right: -4%
 		.owl-carousel__btn-icon
 			font-size: 141px
+			+xs
+				font-size: 80px
+			+r(424)
+				font-size: 46px
 	&__person
 		margin-bottom: 15px
 		text-align: center
+		+r(424)
+			display: inline-block
 		&-pic
+			margin: 0 auto
 			width: 160px
 			height: 213px
+			+r(424)
+				width: 134px
+				height: 180px
 			img
 				height: 100%
 		&-data
 			padding: 10px 0 0
 			line-height: 25px
+			+r(424)
+				font-size: 14px
+				line-height: 1.5
 		&-name
 			font-weight: 500
 		&-position
@@ -68,6 +133,13 @@
 		&-mail
 			font-weight: 500
 	&_default
-		padding: 65px 0 132px
+		padding: 60px 0 130px
 		.next-section
 			bottom: 8%
+			+r(1365)
+				bottom: 2%
+		+r(1365)
+			padding: 60px 0 80px
+		+sm
+			padding: 50px 0 30px
+		 

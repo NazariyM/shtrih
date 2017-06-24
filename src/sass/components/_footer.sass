@@ -1,22 +1,53 @@
 .footer
 	padding: 55px 0 105px
+	+md
+		padding: 50px 0 60px
+	+xs
+		padding: 50px 0 70px
 	&__container
 		position: relative
 		display: flex
 		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+		+xs
+			justify-content: space-around
 	&__col
 		flex: 0 1 180px
 		padding-bottom: 60px
 		text-align: left
+		+xs
+			flex: 0 1 260px
+			padding-bottom: 25px
+			margin: 0 10px
+		+r(599)
+			flex-basis: 252px
 		&:nth-child(5)
 			position: relative
 			flex-basis: 168px
+			+sm
+				flex-basis: 100%
+				padding: 15px 0 80px
+				text-align: center
+				.footer__title
+					text-align: center
+			+xs
+				padding: 0
 	&__title
 		margin-bottom: 8px
 		text-align: left
 		letter-spacing: .05em
+		+sm
+			font-size: 16px
+			letter-spacing: 0
+		+xs
+			font-size: 18px
 	&__list
 		padding-right: 10px
+		+sm
+			padding-right: 15px
+		+xs
+			padding-right: 0
 		li
 			line-height: 20px
 		li:not(:last-child)
@@ -25,12 +56,16 @@
 			font-size: 14px
 			line-height: 18px
 			text-decoration: underline
+			+sm
+				font-size: 14px
 			+hover
 				text-decoration: none
 	&__address
 		padding-bottom: 0
 		font-style: normal
 		font-size: 14px
+		+sm
+			font-size: 14px
 		&-item:not(:last-child)
 			margin-bottom: 9px
 		&-city
@@ -49,15 +84,23 @@
 	&__write-btn
 		height: 41px
 		width: 100%
+		max-width: 168px
+		margin: 0 auto
 		line-height: 41px
 	&__dev-link
 		position: absolute
-		left: 8px
-		bottom: 3px
+		right: 50px
+		bottom: 0
 		display: block
 		padding-left: 16px
 		font-size: 14px
 		line-height: 18px
+		+sm
+			right: 15px
+		+xs
+			right: calc(50% - 61px)
+			bottom: -50px
+			text-align: center
 		&::before
 			content: ''
 			position: absolute
@@ -75,3 +118,7 @@
 		bottom: 0
 		font-size: 13px
 		color: $black
+		+xs
+			position: static
+			margin-top: 15px
+			text-align: center

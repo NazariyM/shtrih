@@ -128,6 +128,7 @@
 	&.is-open
 		pointer-events: auto
 		opacity: 1
+		transform: scale(1)
 	+xs
 		pointer-events: none
 		opacity: 0
@@ -140,7 +141,8 @@
 		display: flex
 		justify-content: center
 		flex-direction: column
-		+tr(opacity .4s ease)
+		transition: opacity .25s ease-in-out, transform .3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+		transform: scaleX(.6)
 		background: $white
 	&__link
 		position: relative

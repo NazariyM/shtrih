@@ -11,10 +11,18 @@
 (function initMenuToggle() {
   const $menuBtn = $('.js-nav-toggle');
   const $menu = $menuBtn.next().find('.nav');
-  $menuBtn.on('click', function (ev) {
+  const BODY = $('body');
+  $menuBtn.on('click', function(ev) {
     ev.preventDefault();
     const $this = $(this);
     $this.toggleClass('is-active');
     $menu.toggleClass('is-open');
+    if (!BODY.hasClass('is-locked')) {
+      BODY.addClass('is-locked');
+    } else {
+      setTimeout(() => {
+        BODY.removeClass('is-locked');
+      }, 350);
+    }
   });
 }());

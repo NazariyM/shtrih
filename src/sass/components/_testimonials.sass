@@ -1,12 +1,24 @@
 .testimonials
+	+sm
+		padding: 30px 0
 	&__container
 		max-width: 1200px
 		+clr
 	&__col
 		float: left
 		width: 50%
+		+sm
+			width: 100%
+			float: none
 		&:nth-child(1)
 			padding-left: 15px
+			+md
+				padding-left: 0
+			+sm
+				max-width: 600px
+				margin: 0 auto
+			+xs
+				max-width: 400px
 	&__slider
 		&-item
 			position: relative
@@ -35,6 +47,14 @@
 			bottom: 11%
 			transform: translateX(-50%)
 			z-index: 1
+			+md
+				bottom: 6%
+			+xs
+				transform: none
+				left: 0
+				right: 0
+				max-width: 220px
+				margin: 0 auto
 		.owl-carousel__btn_prev
 			left: 4.5%
 		.owl-carousel__btn_next
@@ -45,12 +65,23 @@
 			stroke: $black
 	&__block
 		padding: 45px 30px 10px 10px
+		+md
+			padding: 40px 0 15px 15px
+		+sm
+			padding: 15px
+		+xs
+			padding: 15px 0
 		&-item
 			position: relative
 			padding: 25px 30px
 			border-bottom: 1px dashed #e0e1e2
+			+md
+				padding: 15px 20px
 		&-text
 			text-align: justify
+			+sm
+				font-size: 15px
+				text-align: left
 		&-link
 			font-size: 12px
 			font-weight: 700
@@ -69,9 +100,19 @@
 			&_l
 				top: 17%
 				left: 1%
+				+md
+					left: 0
+				+xs
+					top: 18px
+					left: -1%
 			&_r
 				right: 1%
 				bottom: 34%
+				+md
+					right: 0
+				+xs
+					bottom: 30%
+					right: -1%
 		
 		&-bottom
 			margin: 30px 0 0
