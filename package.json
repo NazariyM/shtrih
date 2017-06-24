@@ -7,7 +7,7 @@
     "start": "gulp",
     "precommit": "gulp lint"
   },
-  "authors": "Coderiver <html@coderiver.com.ua>",
+  "authors": "NM",
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "browser-sync": "^2.10.0",
