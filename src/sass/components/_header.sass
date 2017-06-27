@@ -1,12 +1,17 @@
 .header
-	padding: 62px 0 25px
+	padding: 62px 0 32px
 	color: $black
 	+md
 		padding: 20px 0
 	+xs
 		position: relative
 	&__container
+		max-width: 1142px
 		font-size: 0
+		+md
+			text-align: center
+		+sm
+			padding: 0 10px
 		+xs
 			display: flex
 			flex-wrap: wrap
@@ -14,12 +19,17 @@
 		position: relative
 		display: inline-block
 		vertical-align: middle
+		height: 42px
 		padding: 0 13px
+		+vertical
 		+md
-			padding: 0 8px
+			padding: 0 6px
 		+xs
 			padding: 0
 			z-index: 11
+			height: auto
+			&::before
+				display: none
 		&:first-child
 			padding-left: 0
 		&:last-child::after
@@ -27,17 +37,20 @@
 		&::after
 			content: ''
 			position: absolute
-			right: 0
-			top: -5px
+			right: -1px
+			top: 4px
 			background: #e6e7e8
 			height: 41px
 			width: 1px
+			+md
+				top: 2px
 			+xs
 				display: none
 		&:nth-child(1)
 			+xs
 				flex-basis: 100%
-				margin-bottom: 10px
+				margin-bottom: 20px
+				text-align: left
 		&:nth-child(3)
 			+sm
 				display: none
@@ -46,14 +59,19 @@
 	&__phone::after
 		top: 5px
 	&__logo
-		display: block
+		display: inline-block
+		vertical-align: middle
 		+s('logo')
 	&__phone
+		display: inline-block
+		vertical-align: middle
 		text-align: center
 		&-link
 			display: block
 			font-size: 22px
 			font-weight: 500
+			+md
+				font-size: 18px
 			+xs
 				line-height: 1
 				font-size: 20px
@@ -61,7 +79,10 @@
 			color: $grey
 			font-size: 13px
 			font-weight: 300
+			+md
+				font-size: 12px
 	&__bar
+		display: inline-flex
 		padding-right: 0
 		+md
 			padding-right: 0
@@ -74,29 +95,28 @@
 			margin-left: auto
 		&-col
 			position: relative
-			display: inline-block
-			vertical-align: middle
+			display: inline-flex
+			align-items: center
 			padding-right: 24px
+			height: 42px
 			+md
-				padding-right: 22px
+				padding-right: 16px
 			+sm
-				padding-right: 12px
+				padding-right: 8px
+			+xs
+				height: auto
 			&::after
 				@extend .header__col::after
-				right: 11px
-				top: -9px
+				right: 10px
+				top: 1px
 				+md
-					right: 13px
+					right: 6px
 				+sm
 					display: none
 			&:last-child
 				padding-right: 0
 			&:last-child::after
 				display: none
-			&:nth-child(2)::after
-				top: -8px
-				+md
-					right: 9px
 		&-link
 			position: relative
 			display: block
@@ -159,6 +179,8 @@
 			padding: 25px 10px
 			font-size: 18px
 			line-height: 1
+		+sm
+			font-size: 14px
 		+rh(374)
 			padding: 10px!important
 		&::after
@@ -178,9 +200,9 @@
 		&:not(:last-child)
 			margin-right: 22px
 			+md
-				margin-right: 16px
+				margin-right: 11px
 			+sm
-				margin-right: 10px
+				margin-right: 12px
 			+xs
 				margin-right: 0
 		&.is-active
