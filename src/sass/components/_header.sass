@@ -7,7 +7,6 @@
 		position: relative
 	&__container
 		font-size: 0
-		text-align: center
 		+xs
 			display: flex
 			flex-wrap: wrap
@@ -15,7 +14,7 @@
 		position: relative
 		display: inline-block
 		vertical-align: middle
-		padding: 0 17px
+		padding: 0 13px
 		+md
 			padding: 0 8px
 		+xs
@@ -50,6 +49,7 @@
 		display: block
 		+s('logo')
 	&__phone
+		text-align: center
 		&-link
 			display: block
 			font-size: 22px
@@ -76,14 +76,14 @@
 			position: relative
 			display: inline-block
 			vertical-align: middle
-			padding-right: 39px
+			padding-right: 24px
 			+md
 				padding-right: 22px
 			+sm
 				padding-right: 12px
 			&::after
 				@extend .header__col::after
-				right: 18px
+				right: 11px
 				top: -9px
 				+md
 					right: 13px
@@ -149,7 +149,7 @@
 	&__link
 		position: relative
 		display: inline-block
-		padding: 3px
+		padding: 1px
 		vertical-align: middle
 		font-size: 16px
 		font-weight: 700
@@ -176,7 +176,7 @@
 				right: 0
 				background: $red
 		&:not(:last-child)
-			margin-right: 33px
+			margin-right: 22px
 			+md
 				margin-right: 16px
 			+sm
