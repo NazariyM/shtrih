@@ -1,10 +1,10 @@
 (function initSectionScroll() {
   const $nextSectionScroll = $('.js-next-section');
   $nextSectionScroll.append('<button class="next-section" type="button"><svg class="icon-mouse-down next-section__icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-mouse-down"></use></svg></button>');
-  $nextSectionScroll.on('click', '.next-section', function(e) {
+  $nextSectionScroll.on('click', '.next-section', function (e) {
     e.preventDefault();
     const $closestSect = $(this).parent($nextSectionScroll).next().offset().top;
-    $('html, body').animate({ scrollTop: $closestSect }, '300');
+    $('html, body').animate({scrollTop: $closestSect}, '300');
   });
 }());
 
@@ -12,7 +12,7 @@
   const $menuBtn = $('.js-nav-toggle');
   const $menu = $menuBtn.next().find('.nav');
   const BODY = $('body');
-  $menuBtn.on('click', function(ev) {
+  $menuBtn.on('click', function (ev) {
     ev.preventDefault();
     const $this = $(this);
     $this.toggleClass('is-active');
@@ -26,3 +26,24 @@
     }
   });
 }());
+
+const $hideText = $('.js-dot');
+$hideText.dotdotdot({
+
+});
+//
+// init() {
+//   $window.on('load', () => {
+//     this.initDot();
+//     this.onResize();
+//   });
+// }
+// onResize() {
+//   // reinit dotdotdot
+//   const reinitDot = throttle(() => {
+//     this.initDot();
+//   }, 250, this);
+//
+//   // reinit dotdotdot on resize
+//   $window.on('resize orientationchange', reinitDot);
+// }

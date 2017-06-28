@@ -5,9 +5,13 @@
 		padding: 20px 0
 	+xs
 		position: relative
+	&_no-slider
+		padding: 62px 0 53px
+		border-bottom: 2px solid #e6e7e8
 	&__container
 		max-width: 1142px
 		font-size: 0
+		white-space: nowrap
 		+md
 			text-align: center
 		+sm
@@ -108,7 +112,7 @@
 			&::after
 				@extend .header__col::after
 				right: 10px
-				top: 1px
+				top: 4px
 				+md
 					right: 6px
 				+sm
@@ -126,19 +130,6 @@
 				+s('cart')
 			&_user
 				+s('user')
-		&-count
-			position: absolute
-			top: -3px
-			right: -5px
-			width: 16px
-			height: 16px
-			background-color: #d62326
-			color: $white
-			font-size: 8px
-			font-weight: 700
-			line-height: 16px
-			text-align: center
-			border-radius: 50%
 			
 	&__title
 		+hide-text

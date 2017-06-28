@@ -1,0 +1,68 @@
+/* ===================================
+	socials
+	 =================================== */
+.socials
+	font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: middle
+		+tr(opacity .3s)
+		+hover
+			opacity: .7
+		&:not(:last-child)
+			margin-right: 15px
+		&_fb
+			+s('fb')
+		&_tw
+			+s('tw')
+		&_vk
+			+s('vk')
+		&_inst
+			+s('inst')
+
+/* ===================================
+	 tags
+	 =================================== */
+.tags
+	&__list
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		&-item
+			margin: 0 24px 30px
+		&-link
+			position: relative
+			font-size: 18px
+			font-weight: 700
+			line-height: 1
+			text-transform: uppercase
+			color: #000
+			letter-spacing: .05em
+			+tr(color .2s)
+			+hover
+				color: #d62326
+	&_default
+		padding: 56px 0 14px
+		margin-bottom: -40px
+
+/* count
+	----------------------------------- */
+.count
+	position: absolute
+	width: 16px
+	height: 16px
+	background-color: #d62326
+	color: $white
+	font-size: 8px
+	font-weight: 700
+	line-height: 16px
+	text-align: center
+	border-radius: 50%
+	&_cart
+		top: -3px
+		right: -5px
+	&_tags
+		top: -8px
+		right: -15px
+	
+

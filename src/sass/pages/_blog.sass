@@ -1,0 +1,62 @@
+.blog
+	&__container
+		display: flex
+		flex-wrap: wrap
+	&__item
+		position: relative
+		margin-right: 31px
+		width: percentage(254 / 1110)
+		margin-bottom: 30px
+		&:nth-child(3n)
+			margin-right: 0
+		&_md
+			margin-right: 30px
+			width: percentage(540 / 1110)
+		&_md &-text
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: 2
+			padding: 12px 18px 20px
+			max-width: 350px
+			height: auto
+			background: rgba(#fff, .9)
+			border: 2px solid #e0e0e0
+		&_md &-img-wrap
+			height: 400px
+		&-img-wrap
+			height: 188px
+			overflow: hidden
+		&-img
+			transition: transform .2s cubic-bezier(0.55, 0.09, 0.68, 0.53)
+			will-change: transform
+			+gpu
+			&:hover
+				transform: scale(1.1)
+		&-text
+			display: flex
+			flex-direction: column
+			height: 212px
+			padding: 15px 18px 20px
+			border: 2px solid #e0e0e0
+			border-top: 0
+		&-title
+			margin-bottom: 8px
+		&-descr
+			margin-bottom: 10px
+			font-size: 15px
+			line-height: 23px
+		&-row
+			display: flex
+			justify-content: space-between
+			margin-top: auto
+		&-date
+			font-size: 14px
+			line-height: 22px
+		&-link
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 700
+
+	&_default
+		padding: 40px 0 50px

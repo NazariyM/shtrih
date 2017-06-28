@@ -1,5 +1,5 @@
 //BEGIN header
-+b.HEADER.header
++b.HEADER.header(class= headerClass ? headerClass : '')
   +b.BUTTON(type='button').nav-toggle.js-nav-toggle
     +e.SPAN.icon
   +e.container.container
@@ -21,7 +21,7 @@
         +e.A.bar-link._mail(href='#!')
       +e.bar-col
         +e.A.bar-link._cart(href='#!')
-          +e.SPAN.bar-count 11
+          +b.SPAN.count._cart 11
       +e.bar-col
         +e.A.bar-link._user(href='#!')
 //END header
