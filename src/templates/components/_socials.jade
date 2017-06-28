@@ -1,7 +1,8 @@
 if socials ? socials : socials = []
 
 //begin socials
-+b.socials(class= socials.classMod ? socials.classMod : '')
++b.socials(class= socialsClass ? socialsClass : '')
+	-var socialsList = [{picClass: 'fb'}, {picClass: 'tw'}, {picClass: 'vk'}, {picClass: 'inst'}];
 	mixin socialsLink(item)
 		+e.A.link(class='socials__link_' + item.picClass href='#!')
 	each item in socialsList

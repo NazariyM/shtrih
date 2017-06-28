@@ -1,7 +1,9 @@
 ProjectTitle: ШТРИХ РУ
 
 PageList:
-- file: home.html
+- file: home-page.html
   ready: 100
-- file: blog.html
+- file: blog-page.html
+  ready: 100%
+- file: articles-page.html
   ready: 100%

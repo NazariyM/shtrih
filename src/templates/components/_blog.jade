@@ -1,0 +1,41 @@
+if blog ? blog : blog = []
+	//begin blog
++b.SECTION.blog(class= blogClass ? blogClass : '')
+	+e.container.container
+
+		+e.ARTICLE.item._md
+			+e.item-img-wrap
+				+e.IMG.item-img.obj-fit(src='img/content/blog-1.jpg')
+			+e.item-text
+				+e.H4.item-title.title-xs Зарядные устройства
+				+e.P.item-descr Произведенная с настоящим искусством, сочетающая в себе высочайший стандарт качества и великолепный.
+				+e.item-row
+					+e.item-date 10.03.2017
+					+e.A.item-link.link(href='#!') ЧИТАТЬ
+
+		-
+			var i = 0
+			imgCount = 2
+		while i < 4
+			+e.ARTICLE.item
+				+e.item-img-wrap
+					+e.IMG.item-img.obj-fit(src='img/content/blog-#{imgCount}.jpg')
+				+e.item-text
+					+e.H4.item-title.title-xs Зарядные устройства
+					+e.P.item-descr Произведенная с настоящим искусством, сочетающая в себе высочайший стандарт качества и великолепный.
+					+e.item-row
+						+e.item-date 10.03.2017
+						+e.A.item-link.link(href='#!') ЧИТАТЬ
+			-i++
+			-imgCount++
+
+		+e.ARTICLE.item._md
+			+e.item-img-wrap
+				+e.IMG.item-img.obj-fit(src='img/content/blog-6.jpg')
+			+e.item-text
+				+e.H4.item-title.title-xs Зарядные устройства
+				+e.P.item-descr Произведенная с настоящим искусством, сочетающая в себе высочайший стандарт качества и великолепный.
+				+e.item-row
+					+e.item-date 10.03.2017
+					+e.A.item-link.link(href='#!') ЧИТАТЬ
+	//end blog

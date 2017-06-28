@@ -1,17 +1,17 @@
 if tags ? tags : tags = []
 
 //begin tags
-+b.tags(class= tags.classMod ? tags.classMod : '')
++b.SECTION.tags(class= tags.classMod ? tags.classMod : '')
 	+e.container.container
 		if tags.title
-			+e.title Теги
+			+e.title.title-md Теги
 		+e.UL.list
 			-var tagsList = [{text:'акции'},{text:'пресса о нас', count:'2'},{text:'интервью'},{text:'продукция', count:'4'},{text:'выставки'},{text:'кейсы'},{text:'календари'},{text:'награды'},{text:'наша жизнь'},{text:'новости отрасли', count:'8'},{text:'полиграфия'},{text:'производство'},{text:'сувениры'}];
 				mixin tagsItem(item)
 					+e.LI.list-item
 						+e.A.list-link(href='#!')= item.text
 							if item.count
-								+b.count._tags= item.count
+								+b.DIV.count._tags= item.count
 				each item in tagsList
 					+tagsItem(item)
 //end tags

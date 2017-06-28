@@ -13,14 +13,23 @@ body
 		right: 0
 		height: 100%
 		overflow: hidden
+		
+*
+	-webkit-tap-highlight-color: transparent
 
 h1, h2, h3, h4, h5, h6
 	font-weight: normal
+	+sel
 
 a
 	color: inherit
 	text-decoration: none
-
+	&:hover, &:focus
+		text-decoration: none
+		
+p, a, span, div
+	+sel
+	
 img
 	display: block
 	width: 100%
@@ -61,6 +70,7 @@ img
 .link
 	color: $red
 	text-decoration: underline
+	+sel
 	+hover
 		text-decoration: none
 	&_upper
@@ -121,7 +131,7 @@ img
 	font-size: 14px
 	font-weight: 700
 	line-height: 44px
-	letter-spacing: .06em
+	letter-spacing: .07em
 	cursor: pointer
 	+hover
 		outline-color: rgba(255, 255, 255, 0)
@@ -129,12 +139,11 @@ img
 		background: $red
 		color: $white
 	&_red
-		padding: 0 39px
+		padding: 0 35px
 		height: 50px
 		line-height: 48px
 		background: $red
 		color: $white
-		letter-spacing: 0
 		+hover
 			background: $white
 			color: $black

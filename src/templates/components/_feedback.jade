@@ -1,0 +1,54 @@
+if feedback ? feedback : feedback = []
+
+//begin feedback
++b.feedback(class= feedbackClass ? feedbackClass : '')
+	+e.item
+		+e.item-img
+			+e.IMG(src='img/content/team-1.jpg')
+		+b.rating.feedback__item-rating.is-disabled
+			+e.in
+				+e.INPUT.input(id='feedback-rating-5' value='5' type='radio' name='feedback-rating')
+				+e.LABEL.icon(for='feedback-rating-5')
+					+icon('icon-star', 'rating__star')
+				+e.INPUT.input(checked id='feedback-rating-4' value='4' type='radio' name='feedback-rating')
+				+e.LABEL.icon(for='feedback-rating-4')
+					+icon('icon-star', 'rating__star')
+				+e.INPUT.input(id='feedback-rating-3' value='3' type='radio' name='feedback-rating')
+				+e.LABEL.icon(for='feedback-rating-3')
+					+icon('icon-star', 'rating__star')
+				+e.INPUT.input(id='feedback-rating-2' value='2' type='radio' name='feedback-rating')
+				+e.LABEL.icon(for='feedback-rating-2')
+					+icon('icon-star', 'rating__star')
+				+e.INPUT.input(id='feedback-rating-1' value='1' type='radio' name='feedback-rating')
+				+e.LABEL.icon(for='feedback-rating-1')
+					+icon('icon-star', 'rating__star')
+
+		+e.P.item-text Постарайтесь отразить в своем сюрпризе интересны начальника или директора. Если вы их не знаете - постарайтесь узнать у коллег, может быть кто-то располагает подобной информацией. Если такой возможности нет, можно воспользоваться стандартными решениями - к примеру, письменные принадлежности являются беспроигрышным вариантом.
+			+icon('icon-quote_l', 'feedback__item-quote feedback__item-quote_l')
+			+icon('icon-quote_r', 'feedback__item-quote feedback__item-quote_r')
+
+	+e.FORM(action='#!')
+		+e.form-in
+			+b.rating.feedback__item-rating
+				+e.in
+					+e.INPUT.input(id='message-rating-5' value='5' type='radio' name='message-rating')
+					+e.LABEL.icon(for='message-rating-5')
+						+icon('icon-star', 'rating__star')
+					+e.INPUT.input(id='message-rating-4' value='4' type='radio' name='message-rating')
+					+e.LABEL.icon(for='message-rating-4')
+						+icon('icon-star', 'rating__star')
+					+e.INPUT.input(id='message-rating-3' value='3' type='radio' name='message-rating')
+					+e.LABEL.icon(for='message-rating-3')
+						+icon('icon-star', 'rating__star')
+					+e.INPUT.input(id='message-rating-2' value='2' type='radio' name='message-rating')
+					+e.LABEL.icon(for='message-rating-2')
+						+icon('icon-star', 'rating__star')
+					+e.INPUT.input(id='message-rating-1' value='1' type='radio' name='message-rating')
+					+e.LABEL.icon(for='message-rating-1')
+						+icon('icon-star', 'rating__star')
+			+e.message
+				+b.TEXTAREA.textarea-style(placeholder='Введите текст отзыва')
+			+e.BUTTON.btn.btn_red(type='button') Отправить
+
+
+//end feedback

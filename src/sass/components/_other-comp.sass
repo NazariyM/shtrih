@@ -24,26 +24,42 @@
 	 tags
 	 =================================== */
 .tags
+	&__title
+		text-align: left
 	&__list
 		display: flex
 		justify-content: center
 		flex-wrap: wrap
 		&-item
-			margin: 0 24px 30px
+			margin: 0 23px 30px
+			&:nth-child(7) ~ &
+				margin-bottom: 0
 		&-link
 			position: relative
 			font-size: 18px
 			font-weight: 700
 			line-height: 1
 			text-transform: uppercase
-			color: #000
-			letter-spacing: .05em
+			color: $black
+			letter-spacing: .07em
 			+tr(color .2s)
 			+hover
 				color: #d62326
 	&_default
-		padding: 56px 0 14px
-		margin-bottom: -40px
+		padding: 56px 0 20px
+	&_aside
+		flex: 0 1 255px
+	&_aside &__container
+		padding: 0
+	&_aside &__list
+		justify-content: flex-start
+		flex-direction: column
+		padding: 30px 0 0
+		border-top: 1px solid #e6e7e8
+	&_aside &__list-item
+		margin: 0 0 20px 0
+	&_aside &__list-item:nth-child(7) ~ &__list-item
+		margin-bottom: 20px
 
 /* count
 	----------------------------------- */
@@ -64,5 +80,73 @@
 	&_tags
 		top: -8px
 		right: -15px
-	
-
+		
+/* rating
+	----------------------------------- */
+.rating
+	&__in
+		display: flex
+		flex-direction: row-reverse
+		justify-content: center
+	&__input
+		display: none
+	&__input ~ &__icon .rating__star
+		fill: #cccecf
+	&__input:checked ~ &-icon .rating__star,
+	&__input:checked &-icon .rating__star
+		fill: #df4d4d
+	&__icon:hover .rating__star,
+	&__icon:hover ~ &__icon .rating__star
+		fill: #cccecf
+	&__input:checked &__icon:hover .rating__star,
+	&__input:checked ~ &__icon .rating__star
+		fill: #df4d4d
+	&__icon
+		display: inline-block
+		cursor: pointer
+	&__star
+		font-size: 16px
+	&.is-disabled
+		pointer-events: none
+		
+/* ===================================
+	 feedback
+	 =================================== */
+.feedback
+	&__item
+		padding-bottom: 25px
+		border-bottom: 1px solid #e6e7e8
+		+clr
+		&-img
+			float: left
+			width: 100px
+			height: 134px
+			margin-right: 20px
+		&-text
+			position: relative
+			float: left
+			width: calc(100% - 120px)
+		&-quote
+			position: absolute
+			fill: #df4d4d
+			font-size: 14px
+			&_l
+				top: 0
+				left: -10px
+			&_r
+				right: 0
+				bottom: 0
+		&-rating
+			display: inline-block
+	&__form
+		&-in
+			padding: 30px 0 0
+	&__message
+		margin: 15px 0 20px
+		textarea
+			min-height: 65px
+	&__btn
+		height: 40px
+		line-height: 39px
+	&_default
+		margin: 40px 0 20px
