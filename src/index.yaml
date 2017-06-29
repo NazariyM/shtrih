@@ -11,3 +11,5 @@ PageList:
   ready: 100%
 - file: souvenirs-page.html
   ready: 100%
+- file: calendars-page.html
+  ready: 100%

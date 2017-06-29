@@ -98,6 +98,7 @@ const $categoryView = $('.js-category-view');
 $categoryLinks.slick({
   slidesToShow: 7,
   slidesToScroll: 1,
+  speed: 200,
   asNavFor: '.js-category-view',
   infinite: false,
   dots: false,
@@ -108,6 +109,7 @@ $categoryLinks.slick({
   nextArrow: '<button class="category__list-btn category__list-btn_next" type="button"><svg class="category__list-btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg></button>'
 });
 $categoryView.slick({
+  speed: 200,
   slidesToShow: 1,
   slidesToScroll: 1,
   asNavFor: '.js-category-links',

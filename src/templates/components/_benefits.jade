@@ -15,4 +15,11 @@ if benefits ? benefits : benefits = []
 						+e.P= item.descrBot
 			each item in benefitsList
 				+benefitsItem(item)
+
+		if benefits.slider
+			+e.slider.js-benefits-slider
+				for benefitSldItem in benefitSldList
+				+e.slider-item
+					+e.IMG(src='img/content/#{benefitSldItem}.jpg')
+
 //end benefits

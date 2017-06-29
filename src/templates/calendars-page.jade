@@ -1,0 +1,70 @@
+---
+title: Calendars Page
+---
+extends layouts/_layout
+
+block header
+	include partials/_header
+
+block content
+	+b.MAIN
+		// begin screen-slider
+		+b.screen-sld
+			+e.IMG(src='img/screen-sld-4.jpg' style='display: block; margin: 0 auto; width: 100%; max-height: 800px')
+		// end screen-slider
+
+		//- category
+		-
+			var category = {classMod: '_default js-next-section', title: 'КАЛЕНДАРИ С ФИРМЕНЫМ СТИЛЕМ ДЛЯ НАШИХ КЛИЕНТОВ', listTitle: 'Виды календарей:', btnText: 'СМОТРЕТЬ ПОДРОБНЕЕ'};
+			var catList = ['Квартальные', 'Настенные перекиднные', '3в1', 'Планинги', 'Домики', 'Караманные', 'Нестандартные', 'Настенные перекиднные', 'Квартальные', 'Домики'];
+			var catViewList = ['category', 'category-2', 'category-3', 'category', 'category-2', 'category-3', 'category', 'category-2', 'category-3', 'category'];
+		include components/_category
+
+		//-benefits
+		-
+			var benefits = {classMod: '_souvenirs js-next-section', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
+			var benefitsList = [{
+			picMod: 'tape',
+			title: '16 лет',
+			subTitle: 'производим колендари',
+			descrTop: 'С 2000 года владеем',
+			descrBot: 'собственной типографией'
+			},{
+			picMod: 'push-btn',
+			title: '90%',
+			subTitle: 'процессов',
+			descrTop: 'Для производства любого объема',
+			descrBot: 'продукции любому колчеству заказчиков'
+			},{
+			picMod: 'cards',
+			title: '30 видов',
+			subTitle: 'календарей',
+			descrTop: 'Мы разрабатываем и реализум',
+			descrBot: 'нестандартные проекты любом сложности и тиража'
+			}
+			,{
+			picMod: 'handshake',
+			title: '967',
+			subTitle: 'компаний',
+			descrTop: 'Доверяют нам и работают',
+			descrBot: 'с нами на постоянной основе'
+			},{
+			picMod: 'box',
+			title: '13 511 015',
+			subTitle: 'календарей',
+			descrTop: 'Мы изготовили за последние',
+			descrBot: '5 лет'
+			}];
+		include components/_benefits
+
+		//- quality
+		-var quality = {classMod: '_no-slider js-next-section', title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ В 100% СЛУЧАЯХ'};
+		include components/_quality
+
+		//- delivery
+		-var deliveryTeaser = {classMod: '_souvenirs', title: 'Доставляем более чем по 90 регионам'}
+		include components/_delivery-teaser
+
+		//- ask
+		-var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'};
+		include components/_ask
