@@ -10,14 +10,14 @@
 		background: url('../img/bg/sect-bg.jpg') repeat-x 0 0
 		height: 12px
 	&__in
-		margin: 75px 0 0
+		margin: 66px 0 0
 		+clr
 	&__list
 		float: left
 		margin-right: 30px
 		width: 350px
 		&-title
-			padding: 0 0 20px
+			padding: 0 0 16px
 			color: $black
 			font-size: 22px
 			line-height: 1
@@ -27,7 +27,7 @@
 			padding: 42px 20px 42px 0
 		&-item
 			&:not(:last-child)
-				margin-bottom: 15px
+				margin-bottom: 10px
 		&-item.slick-current &-text
 			color: $red
 			border-bottom-color: $red
@@ -51,7 +51,7 @@
 				left: 15px
 				top: -10px
 			&_next
-				bottom: 0
+				bottom: -5px
 				left: 15px
 			&-icon
 				font-size: 44px
@@ -78,4 +78,6 @@
 			display: block
 		
 	&_default
-		padding: 75px 0 105px
+		padding: 64px 0 175px
+		.next-section
+			bottom: 10%

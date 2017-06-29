@@ -1,6 +1,9 @@
 const $testimonialsSld = $('.js-testimonials-slider');
 $testimonialsSld.owlCarousel({
+  animateOut: 'flipOutY',
+  animateIn: 'flipInY',
   items: 1,
+  smartSpeed: 450,
   loop: true,
   dots: false,
   nav: true,
@@ -63,6 +66,8 @@ $achieveSld.owlCarousel({
 
 const $qualitySld = $('.js-quality-slider');
 $qualitySld.owlCarousel({
+  animateOut: 'bounceOut',
+  animateIn: 'bounceIn',
   items: 1,
   loop: true,
   autoplay: true,

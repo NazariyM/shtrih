@@ -3,13 +3,18 @@ if quality ? quality : quality = []
 //begin quality
 +b.SECTION.quality(class= quality.classMod ? quality.classMod : '')
 	+e.H2.title.title-md= quality.title
-	+e.slider.js-quality-slider.owl-carousel
-		+e.slider-img
-			+b.IMG.obj-fit(src='img/content/quality-sld-1.jpg')
-		+e.slider-img
-			+b.IMG.obj-fit(src='img/content/quality-sld-1.jpg')
 
-	+e.BUTTON.btn.btn(type='button') СМОТРЕТЬ ПОДРОБНЕЕ
+	if quality.slider
+		+e.slider.js-quality-slider.owl-carousel
+			+e.slider-img
+				+b.IMG.obj-fit(src='img/content/quality-sld-1.jpg')
+			+e.slider-img
+				+b.IMG.obj-fit(src='img/content/quality-sld-1.jpg')
+		+e.BUTTON.btn.btn(type='button') СМОТРЕТЬ ПОДРОБНЕЕ
+
+	else
+		+e.bg-img(style='background-image: url(img/bg/quality_img.jpg)')
+		+e.BUTTON.btn.btn(type='button') СМОТРЕТЬ ПОДРОБНЕЕ
 
 
 //end quality

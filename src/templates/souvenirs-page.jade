@@ -22,7 +22,7 @@ block content
 
 		//-benefits
 		-
-			var benefits = {classMod: '_default js-next-section', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
+			var benefits = {classMod: '_souvenirs js-next-section', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
 			var benefitsList = [{
 			picMod: 'tape',
 			title: '21 год',
@@ -30,32 +30,40 @@ block content
 			descrTop: 'Рекламное агенство "Штрих.ру"',
 			descrBot: 'существует с 1996 года.'
 			},{
-			picMod: 'pc-shield',
-			title: '100%',
-			subTitle: 'гарантия качества',
-			descrTop: 'Мы решаем любые комплексные задачи -',
-			descrBot: 'от простого макетирования до создания индивидуальных сложных проектов.'
+			picMod: 'present',
+			title: 'Более 55 000',
+			subTitle: 'товаров',
+			descrTop: 'Огромный выбор товаров',
+			descrBot: 'позволит вам найти, то что вам нужно'
 			},{
-			picMod: 'marker',
-			title: '55,8 км2',
-			subTitle: 'дизайна за время работы',
-			descrTop: 'Мы набили руку в этой сфере',
-			descrBot: 'и готовы предоставить свой опыт вам'
+			picMod: 'vehicle',
+			title: '717 953 ед.',
+			subTitle: 'сувенирной продукции',
+			descrTop: 'Мы поставили точно в срок',
+			descrBot: 'за последние 5 лет'
 			},{
-			picMod: 'peoples',
-			title: '5',
-			subTitle: 'профессионалов',
-			descrTop: 'Мы продумаем ваш индивидуальный',
-			descrBot: 'дизайн, легко и качественно за счет опытных дизайнеров в штате.'
+			picMod: 'list',
+			title: 'Более 20',
+			subTitle: 'каталогов',
+			descrTop: 'Мы явлемся официальным дилером',
+			descrBot: 'ведущих сувенирных каталогов'
 			}
 			,{
-			picMod: 'pen-ruler',
-			title: '540 объектов',
-			subTitle: 'выполнено в дизайне',
-			descrTop: 'И мы не останавливаемся на',
-			descrBot: 'достигнутом'
+			picMod: 'handshake',
+			title: 'Более 100',
+			subTitle: 'производителей',
+			descrTop: 'Мы напрямую поставляем продукцию',
+			descrBot: 'ведущих российских, европейских и азиатских вендорови реселлеров'
 			}];
 		include components/_benefits
+
+		//- quality
+		-var quality = {classMod: '_no-slider js-next-section', title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ В 100% СЛУЧАЯХ'};
+		include components/_quality
+
+		//- delivery
+		-var deliveryTeaser = {classMod: '_souvenirs', title: 'Доставляем более чем по 90 регионам'}
+		include components/_delivery-teaser
 
 		//- ask
 		-var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'};
