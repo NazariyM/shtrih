@@ -25,6 +25,7 @@
 	 =================================== */
 .tags
 	&__title
+		margin-bottom: 15px
 		text-align: left
 	&__list
 		display: flex
@@ -57,7 +58,7 @@
 		padding: 30px 0 0
 		border-top: 1px solid #e6e7e8
 	&_aside &__list-item
-		margin: 0 0 20px 0
+		margin: 0 0 16px 0
 	&_aside &__list-item:nth-child(7) ~ &__list-item
 		margin-bottom: 20px
 
@@ -126,23 +127,25 @@
 			position: relative
 			float: left
 			width: calc(100% - 120px)
+			padding: 5px 28px 0
+			line-height: 1.4
 		&-quote
 			position: absolute
 			fill: #df4d4d
 			font-size: 14px
 			&_l
-				top: 0
-				left: -10px
+				top: 8px
+				left: 0
 			&_r
 				right: 0
-				bottom: 0
+				bottom: 6px
 		&-rating
 			display: inline-block
 	&__form
 		&-in
 			padding: 30px 0 0
 	&__message
-		margin: 15px 0 20px
+		margin: 7px 0 19px
 		textarea
 			min-height: 65px
 	&__btn

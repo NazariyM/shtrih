@@ -47,8 +47,8 @@ if feedback ? feedback : feedback = []
 					+e.LABEL.icon(for='message-rating-1')
 						+icon('icon-star', 'rating__star')
 			+e.message
-				+b.TEXTAREA.textarea-style(placeholder='Введите текст отзыва')
-			+e.BUTTON.btn.btn_red(type='button') Отправить
+				+b.TEXTAREA.textarea-style(placeholder='Введите текст отзыва' required)
+			+e.BUTTON.btn.btn_red(type='submit') Отправить
 
 
 //end feedback

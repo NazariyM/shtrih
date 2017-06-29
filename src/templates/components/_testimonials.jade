@@ -11,7 +11,7 @@ if testimonials ? testimonials : testimonials = []
 							if testSldItem.markTitle
 								+e.MARK= testSldItem.markTitle
 						+e.slider-img(style='background-image: url(img/content/#{testSldItem.img}.jpg)')
-						+e.slider-link.btn(href='#!')= testSldItem.btn
+						+e.slider-btn.testimonials__btn.btn(href='#!')= testSldItem.btn
 				each testSldItem in testSliderList
 					+testimonialsSliderItem(testSldItem)
 
@@ -27,5 +27,5 @@ if testimonials ? testimonials : testimonials = []
 					+icon('icon-quote_r', 'testimonials__block-quote testimonials__block-quote_r')
 				-i++
 			+e.block-bottom
-				+b.A(href='#!').btn смотреть все отзывы
+				+e.A(href='#!').btn.btn смотреть все отзывы
 //end testimonials
