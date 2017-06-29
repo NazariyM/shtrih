@@ -4,14 +4,13 @@ title: Articles Page
 extends layouts/_layout
 
 block header
-	-var headerClass = '_no-slider';
 	include partials/_header
 
 block content
 	+b.MAIN
 		// begin screen-slider
 		+b.screen-sld
-			+e.IMG(src='img/screen-sld-2.jpg' style='display: block; margin: 0 auto; width: 100%; max-width: 1600px;')
+			+e.IMG(src='img/screen-sld-2.jpg' style='display: block; margin: 0 auto; width: 100%; max-height: 800px')
 		// end screen-slider
 
 		//-benefits
@@ -21,8 +20,8 @@ block content
 			picMod: 'tape',
 			title: '21 год',
 			subTitle: 'в отрасли',
-			descrTop: 'Компания "Штрих.ру"',
-			descrBot: 'на рынке с 1996 года.'
+			descrTop: 'Рекламное агенство "Штрих.ру"',
+			descrBot: 'существует с 1996 года.'
 			},{
 			picMod: 'pc-shield',
 			title: '100%',
@@ -55,7 +54,33 @@ block content
 		-var quality = {classMod: '_default', title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ В 100% СЛУЧАЯХ'};
 		include components/_quality
 
-		//- ask
+		//- work
 		-
-			var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'}
+			var work = {classMod: '_default', title: 'КАК МЫ РАБОТАЕМ?'};
+			workList = [{
+			title: 'ФОРМИРОВАНИЕ ЗАДАЧ, ЗАПОЛНЕНИЕ БРИФА',
+			count: '1',
+			bgImg: '1'
+			},
+			{
+			title: 'РАЗРАБОТКА ДИЗАЙН-КОНЦЕПЦИИ',
+			count: '2',
+			bgImg: '2'
+			},{
+			title: 'РЕДАКТИРОВАНИЕ И СОГЛАСОВАНИЕ',
+			count: '3',
+			bgImg: '3'
+			},{
+			title: 'ДИЗАЙН',
+			count: '4',
+			bgImg: '4'
+			},{
+			title: 'ВЕРСТКА',
+			count: '5',
+			bgImg: '5'
+			}];
+		include components/_work
+
+		//- ask
+		-var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'};
 		include components/_ask

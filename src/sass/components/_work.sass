@@ -1,0 +1,37 @@
+.work
+	&__list
+		display: flex
+		justify-content: space-between
+		margin: 27px 0 0
+	&__card
+		position: relative
+		flex: 0 1 200px
+		margin-bottom: 20px
+		overflow: hidden
+		&:not(:last-child)
+			margin-right: 27px
+		&-title
+			position: absolute
+			top: 6%
+			left: 12%
+			right: 8%
+			font-size: 15px
+			color: $white
+			font-weight: 700
+			line-height: 22px
+		&-count
+			position: absolute
+			bottom: -14px
+			right: 5%
+			font-size: 100px
+			line-height: 1
+			color: rgba($white, .2)
+			font-weight: 900
+		&-bg-wrap
+			padding-top: 200%
+		&-bg
+			+coverdiv
+			+cover
+			z-index: -1
+	&_default
+		padding: 60px 0 63px

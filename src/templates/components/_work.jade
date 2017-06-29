@@ -1,0 +1,16 @@
+if work ? work : work = []
+
+//begin work
++b.work(class= work.classMod ? work.classMod : '')
+	.container
+		+b.title-md= work.title
+		+e.list
+			mixin workCard(item)
+				+e.card
+					+e.card-title= item.title
+					+e.card-count= item.count
+					+e.card-bg-wrap
+						+e.card-bg(style='background-image: url(img/content/work-#{item.bgImg}.jpg)')
+			each item in workList
+				+workCard(item)
+//end work
