@@ -1,0 +1,61 @@
+---
+title: Articles Page
+---
+extends layouts/_layout
+
+block header
+	-var headerClass = '_no-slider';
+	include partials/_header
+
+block content
+	+b.MAIN
+		// begin screen-slider
+		+b.screen-sld
+			+e.IMG(src='img/screen-sld-2.jpg' style='display: block; margin: 0 auto; width: 100%; max-width: 1600px;')
+		// end screen-slider
+
+		//-benefits
+		-
+			var benefits = {classMod: '_default js-next-section', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
+			var benefitsList = [{
+			picMod: 'tape',
+			title: '21 год',
+			subTitle: 'в отрасли',
+			descrTop: 'Компания "Штрих.ру"',
+			descrBot: 'на рынке с 1996 года.'
+			},{
+			picMod: 'pc-shield',
+			title: '100%',
+			subTitle: 'гарантия качества',
+			descrTop: 'Мы решаем любые комплексные задачи -',
+			descrBot: 'от простого макетирования до создания индивидуальных сложных проектов.'
+			},{
+			picMod: 'marker',
+			title: '55,8 км2',
+			subTitle: 'дизайна за время работы',
+			descrTop: 'Мы набили руку в этой сфере',
+			descrBot: 'и готовы предоставить свой опыт вам'
+			},{
+			picMod: 'peoples',
+			title: '5',
+			subTitle: 'профессионалов',
+			descrTop: 'Мы продумаем ваш индивидуальный',
+			descrBot: 'дизайн, легко и качественно за счет опытных дизайнеров в штате.'
+			}
+			,{
+			picMod: 'pen-ruler',
+			title: '540 объектов',
+			subTitle: 'выполнено в дизайне',
+			descrTop: 'И мы не останавливаемся на',
+			descrBot: 'достигнутом'
+			}];
+		include components/_benefits
+
+		//- quality
+		-var quality = {classMod: '_default', title: 'ВЫСОКОЕ КАЧЕСТВО РАБОТ В 100% СЛУЧАЯХ'};
+		include components/_quality
+
+		//- ask
+		-
+			var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'}
+		include components/_ask
