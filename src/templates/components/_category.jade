@@ -1,0 +1,22 @@
+if category ? category : category = []
+
+//begin category
++b.category(class= category.classMod ? category.classMod : '')
+	+e.container.container
+		+b.title-md= category.title
+		+e.in
+			+e.list
+				+e.list-title= category.listTitle
+				+e.list-links.js-category-links
+					for catLink in catList
+						+e.list-item
+							+e.list-text= catLink
+
+			+e.view
+				+e.view-pic.js-category-view
+					for catViewImg in catViewList
+						+e.view-item
+							+b.IMG.obj-fit(src='img/content/#{catViewImg}.jpg')
+
+				+e.BUTTON.view-btn.btn(type='button')= category.btnText
+//end category

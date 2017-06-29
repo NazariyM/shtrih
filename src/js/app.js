@@ -1,4 +1,5 @@
 import owlCarousel from 'owl.carousel';
+import slick from 'slick-carousel';
 import svg4everybody from 'svg4everybody';
 import dotdotdot from 'dotdotdot';
 import objectFitImages from 'object-fit-images';

@@ -1,7 +1,4 @@
 const $testimonialsSld = $('.js-testimonials-slider');
-const $teamSld = $('.js-team-slider');
-const $achieveSld = $('.js-achieve-slider');
-const $qualitySld = $('.js-quality-slider');
 $testimonialsSld.owlCarousel({
   items: 1,
   loop: true,
@@ -10,6 +7,8 @@ $testimonialsSld.owlCarousel({
   navText: ['<svg class="owl-carousel__btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg>', '<svg class="owl-carousel__btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg>'],
   navClass: ['owl-carousel__btn owl-carousel__btn_prev', 'owl-carousel__btn owl-carousel__btn_next']
 });
+
+const $teamSld = $('.js-team-slider');
 $teamSld.owlCarousel({
   loop: true,
   dots: false,
@@ -36,6 +35,8 @@ $teamSld.owlCarousel({
     }
   }
 });
+
+const $achieveSld = $('.js-achieve-slider');
 $achieveSld.owlCarousel({
   items: 3,
   loop: true,
@@ -59,9 +60,12 @@ $achieveSld.owlCarousel({
     }
   }
 });
+
+const $qualitySld = $('.js-quality-slider');
 $qualitySld.owlCarousel({
   items: 1,
   loop: true,
+  autoplay: true,
   dots: false,
   nav: true,
   smartSpeed: 1000,
@@ -82,4 +86,29 @@ $qualitySld.owlCarousel({
   //     margin: 30
   //   }
   // }
+});
+
+const $categoryLinks = $('.js-category-links');
+const $categoryView = $('.js-category-view');
+$categoryLinks.slick({
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  asNavFor: '.js-category-view',
+  infinite: false,
+  dots: false,
+  arrows: true,
+  focusOnSelect: true,
+  vertical: true,
+  prevArrow: '<button class="category__list-btn category__list-btn_prev" type="button"><svg class="category__list-btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg></button>',
+  nextArrow: '<button class="category__list-btn category__list-btn_next" type="button"><svg class="category__list-btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg></button>'
+});
+$categoryView.slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  asNavFor: '.js-category-links',
+  infinite: false,
+  dots: false,
+  arrows: false,
+  draggable: false,
+  fade: true
 });

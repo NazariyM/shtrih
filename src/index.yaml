@@ -9,3 +9,5 @@ PageList:
   ready: 100%
 - file: studio-page.html
   ready: 100%
+- file: souvenirs-page.html
+  ready: 100%

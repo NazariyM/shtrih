@@ -1,0 +1,77 @@
+.category
+	position: relative
+	&::after
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		content: ''
+		display: block
+		background: url('../img/bg/sect-bg.jpg') repeat-x 0 0
+		height: 12px
+	&__in
+		margin: 75px 0 0
+		+clr
+	&__list
+		float: left
+		margin-right: 30px
+		width: 350px
+		&-title
+			padding: 0 0 20px
+			color: $black
+			font-size: 22px
+			line-height: 1
+			font-weight: 700
+			border-bottom: 1px solid #e6e7e8
+		&-links
+			padding: 42px 20px 42px 0
+		&-item
+			&:not(:last-child)
+				margin-bottom: 15px
+		&-text
+			display: inline-block
+			cursor: pointer
+			border-bottom: 1px solid rgba($grey, .7)
+			+tr(border-color .2s)
+			line-height: 19px
+			&:hover
+				border-bottom-color: transparent
+		&-btn
+			position: absolute
+			padding: 5px
+			background: transparent
+			+rotate(90)
+			&.slick-disabled
+				visibility: hidden
+			&_prev
+				left: 15px
+				top: -10px
+			&_next
+				bottom: 0
+				left: 15px
+			&-icon
+				font-size: 44px
+				stroke: $black
+	&__view
+		float: left
+		width: calc(100% - 380px)
+		&-item
+			height: 300px
+			overflow: hidden
+			img
+				transition: all 500ms ease-in-out
+				transform: scale(1.25, 1.25)
+			&.slick-active
+				img
+					transform: scale(1, 1)
+		&-btn
+			margin-top: 20px
+			margin-left: 57px
+			padding: 0 27px
+	&__list-links, &__view-pic
+		display: none
+		&.slick-initialized
+			display: block
+		
+	&_default
+		padding: 75px 0 165px
