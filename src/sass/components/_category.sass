@@ -35,10 +35,11 @@
 			display: inline-block
 			cursor: pointer
 			border-bottom: 1px solid rgba($grey, .7)
-			+tr(border-color .2s)
+			transition: border-bottom-color .2s, color .2s
 			line-height: 19px
-			&:hover
-				border-bottom-color: transparent
+			+hover
+				color: $red
+				border-bottom-color: $red
 		&-btn
 			position: absolute
 			padding: 5px
