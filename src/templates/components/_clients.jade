@@ -1,0 +1,17 @@
+if clients ? clients : clients = []
+
+//begin clients
++b.SECTION.clients(class= clients.classMod ? clients.classMod : '')
+	+e.container.container
+		+b.H2.title-md= clients.title
+		+e.list
+			-
+				var itemCount = 0
+				imgCount = 1
+			while itemCount < 12
+				+e.list-item
+					+e.IMG(src='img/content/client-#{imgCount}.png')
+				-itemCount++
+				-imgCount++
+
+//end clients

@@ -140,7 +140,7 @@ $historyTimeline.slick({
   infinite: false,
   dots: true,
   arrows: false,
-  // dotsSpeed:
+  draggable: false,
   dotsClass: 'history-timeline__nav',
   customPaging(slider, i) {
     const title = $(slider.$slides[i]).data('title');
