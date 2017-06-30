@@ -144,6 +144,6 @@ $historyTimeline.slick({
   dotsClass: 'history-timeline__nav',
   customPaging(slider, i) {
     const title = $(slider.$slides[i]).data('title');
-    return `<button type="button" class="history-timeline__nav-year">${title}</button>`;
+    return `<button type="button" class="history-timeline__nav-year"><span>${title}</span></button>`;
   }
 });

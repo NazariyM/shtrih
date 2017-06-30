@@ -63,20 +63,18 @@
 			&::before
 				left: 7px
 			&::after
-				right: -30px
+				display: none
 			&.slick-active
-				opacity: 1
 				background-color: $red
 				border-color: $white
-				animation: flipInY 1s both
+				animation: myFlip 1.2s
 			&:first-child
 				margin-left: -10px
+				span::before, button::after
+					display: none
 			&:last-child
 				margin-right: -10px
-				&::after
-					display: none
-				button::after,
-				button::before
+				span::after, button::before
 					display: none
 		button
 			pointer-events: all
@@ -88,14 +86,21 @@
 			color: $black
 			background: transparent
 			&::before
-				left: 87px
+				left: 44px
 				top: -11px
 				bottom: -14px
 			&::after
 				top: -11px
-				left: 124px
+				left: -13px
 				bottom: -14px
-		li, button
+			span
+				&::before
+					left: -42px
+					bottom: 17px
+				&::after
+					right: -44px
+					bottom: 17px
+		span, button, li
 			&::before, &::after
 				content: ''
 				position: absolute
@@ -103,3 +108,23 @@
 				width: 1px
 				height: 10px
 				bottom: -13px
+				
+@keyframes myFlip
+	from
+		transform: perspective(400px) rotate3d(0, 1, 0, 120deg)
+		animation-timing-function: ease-in-out
+		opacity: .5
+	
+	40%
+		transform: perspective(400px) rotate3d(0, 1, 0, -40deg)
+		animation-timing-function: ease-in-out
+	
+	60%
+		transform: perspective(400px) rotate3d(0, 1, 0, 20deg)
+		opacity: 1
+	
+	80%
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg)
+	
+	to
+		transform: perspective(400px)
