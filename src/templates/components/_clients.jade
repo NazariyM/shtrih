@@ -13,5 +13,13 @@ if clients ? clients : clients = []
 					+e.IMG(src='img/content/client-#{imgCount}.png')
 				-itemCount++
 				-imgCount++
+			-
+				var itemCount = 12
+				imgCount = 1
+			while itemCount < 18
+				+e.list-item
+					+e.IMG(src='img/content/client-#{imgCount}.png')
+				-itemCount++
+				-imgCount++
 
 //end clients
