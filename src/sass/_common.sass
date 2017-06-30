@@ -96,7 +96,10 @@ img
 		font-size: 14px
 		font-weight: 300
 		width: 100%
+		+tr(border-color 1s)
 		+placeholder-color($grey)
+		&:focus
+			border-color: lightcoral
 	&_name, &_email
 		input
 			padding: 0 10px 0 47px
@@ -115,6 +118,9 @@ img
 	font-weight: 300
 	border-radius: 3px
 	border: 2px solid #cbcdce
+	+tr(border-color 1s)
+	&:focus
+		border-color: lightcoral
 	
 // btns
 .btn
@@ -132,7 +138,7 @@ img
 	color: $black
 	font-size: 14px
 	font-weight: 700
-	line-height: 44px
+	line-height: 42px
 	letter-spacing: .025em
 	cursor: pointer
 	+hover

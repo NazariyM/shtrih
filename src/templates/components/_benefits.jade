@@ -10,6 +10,8 @@ if benefits ? benefits : benefits = []
 					+e.item-pic(class='_' + item.picMod)
 					+e.item-text
 						+e.item-title= item.title
+							if item.titleSymbol
+								+e.SUP= item.titleSymbol
 						+e.item-sub-title= item.subTitle
 						+e.item-descr
 							+e.P= item.descrTop

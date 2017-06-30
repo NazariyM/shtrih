@@ -165,26 +165,43 @@
 	&__title
 		position: absolute
 		z-index: 2
-		top: 5%
+		top: 6%
+		+r(599)
+			top: 3%
 	&__slider
 		margin: 0 auto
 		&-img
 			img
-				max-height: 954px
+				min-height: 400px
 		.owl-carousel__btn_prev
 			left: 10%
+			+r(599)
+				left: 1%
 		.owl-carousel__btn_next
 			right: 10%
+			+r(599)
+				right: 1%
 		.owl-carousel__btn-icon
 			font-size: 140px
+			+r(1365)
+				font-size: 80px
+			+r(599)
+				font-size: 60px
 	&__btn
 		position: absolute
-		bottom: 10%
+		bottom: 16%
 		z-index: 2
 		padding: 0 21px
+		+r(1365)
+			bottom: 14%
+		+sm
+			bottom: 8%
 	&__bg-img
 		+coverdiv
 		+cover
+	.next-section
+		+r(1365)
+			bottom: 0
 	&_no-slider
 		position: relative
 		min-height: 954px

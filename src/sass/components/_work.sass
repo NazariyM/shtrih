@@ -3,13 +3,34 @@
 		display: flex
 		justify-content: space-between
 		margin: 27px 0 0
+		+sm
+			justify-content: space-around
+			flex-wrap: wrap
+		+xs
+			justify-content: center
+			margin: 30px -8px 0
+		+r(425)
+			margin: 30px 0 0
 	&__card
 		position: relative
 		flex: 0 1 200px
 		margin-bottom: 20px
 		overflow: hidden
+		+sm
+			margin: 0 15px 30px
+		+xs
+			margin: 0 4px 15px
+		+r(425)
+			flex-grow: 1
+			max-width: 320px
 		&:not(:last-child)
 			margin-right: 27px
+			+md
+				margin-right: 10px
+			+sm
+				margin: 0 15px 30px
+			+xs
+				margin: 0 4px 15px
 		&-title
 			position: absolute
 			top: 6%
@@ -19,6 +40,15 @@
 			color: $white
 			font-weight: 700
 			line-height: 22px
+			+md
+				left: 6%
+			+sm
+				font-size: 14px
+			+r(424)
+				font-size: 24px
+				line-height: 1.25
+				top: 3%
+				left: 4%
 		&-count
 			position: absolute
 			bottom: -14px
@@ -27,6 +57,9 @@
 			line-height: 1
 			color: rgba($white, .2)
 			font-weight: 900
+			+r(425)
+				font-size: 130px
+				bottom: 0
 		&-bg-wrap
 			padding-top: 200%
 		&-bg
@@ -34,4 +67,6 @@
 			+cover
 			z-index: -1
 	&_default
-		padding: 60px 0 63px
+		padding: 70px 0 67px
+		+sm
+			padding: 45px 0 50px
