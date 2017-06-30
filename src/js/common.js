@@ -27,23 +27,5 @@
   });
 }());
 
-const $hideText = $('.js-dot');
-$hideText.dotdotdot({
-
-});
-//
-// init() {
-//   $window.on('load', () => {
-//     this.initDot();
-//     this.onResize();
-//   });
-// }
-// onResize() {
-//   // reinit dotdotdot
-//   const reinitDot = throttle(() => {
-//     this.initDot();
-//   }, 250, this);
-//
-//   // reinit dotdotdot on resize
-//   $window.on('resize orientationchange', reinitDot);
-// }
+const $textOverflow = $('.js-dot');
+$textOverflow.dotdotdot();

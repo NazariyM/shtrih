@@ -1,27 +1,83 @@
 .history
 	&__container
 		max-width: 1490px
+		padding: 0
 	&_default
-		padding: 70px 0 160px
-		
+		padding: 70px 0 180px
+		+sm
+			padding: 50px 0 110px
+		+r(599)
+			padding: 50px 0 70px
+
 .history-timeline
-	margin: 27px 0 0
+	margin: 25px 0 0
 	padding: 0 175px
 	display: none
-	background: url(../img/bg/dashed-line_bg.png) no-repeat 120% 10%
+	background: url(../img/bg/dashed-line_l.png) no-repeat -5.9% 10%,url(../img/bg/dashed-line_r.png) no-repeat 99.3% 10%
+	+r(1449)
+		max-width: 1350px
+		margin: 25px auto 0
+		padding: 0 130px
+		background: url(../img/bg/dashed-line_l.png) no-repeat -5.9% 10%,url(../img/bg/dashed-line_r.png) no-repeat 103% 10%
+	+r(1365)
+		max-width: 1090px
+		padding: 0 15px
+		background: 0
+	+sm
+		padding: 0 20px
+	+r(599)
+		padding: 0
 	&.slick-initialized
 		display: block
 	&__slide
 		background: url(../img/bg/dashed-line.png) no-repeat 26% 11%
+		+sm
+			background: 0
 		&:nth-child(2n)
-			background: url(../img/bg/dashed-line.png) no-repeat 86.2% 13%
+			background: url(../img/bg/dashed-line.png) no-repeat 86.2% 11.8%
+			+sm
+				background: 0
 		&:nth-child(11)
-			background: url(../img/bg/dashed-line.png) no-repeat 85.3% 13%
+			background: url(../img/bg/dashed-line.png) no-repeat 86.3% 12%
+			+sm
+				background: 0
 	&__item
-		width: 260px
+		max-width: 260px
 		float: left
+		+r(1365)
+			max-width: 230px
+		+sm
+			position: relative
+			float: none
+			max-width: 100%
+			padding: 0 20px
+			text-align: center
+			margin: 20px 0 0
+		&::before, &::after
+			display: none
+			position: absolute
+			top: 15px
+			width: 24%
+			content: ''
+			height: 2px
+			background: linear-gradient(to right, lightcoral 50%, transparent 50%)
+			background-size: 10px 2px, 100% 2px
+			+sm
+				display: block
+		&::before
+			left: 25px
+			+xs
+				left: 11px
+		&::after
+			right: 33px
+			+xs
+				right: 12px
 		& + &
 			margin: 60px 0 0 20px
+			+r(1365)
+				margin: 60px 0 0 10px
+			+sm
+				margin: 20px 0 0
 		&-year
 			position: relative
 			display: inline-block
@@ -39,16 +95,23 @@
 			margin: 10px 0 0
 			font-size: 15px
 			line-height: 23px
+			+r(1365)
+				font-size: 14px
+				line-height: 20px
+			+sm
+				font-size: 15px
 	&__nav
 		position: relative
 		display: flex
 		justify-content: space-between
 		max-width: 730px
-		margin: 40px auto 0
+		margin: 20px auto 0
 		height: 6px
 		border-radius: 3px
 		background-color: #cbcdce
 		font-size: 0
+		+r(599)
+			max-width: 280px
 		li
 			position: relative
 			margin-top: -7px
@@ -59,6 +122,12 @@
 			background-color: transparent
 			cursor: pointer
 			+gpu
+			+r(599)
+				background: $grey
+				border-color: $white
+				width: 16px
+				height: 16px
+				margin-top: -5px
 			&::before
 				left: 7px
 				content: ''
@@ -67,6 +136,8 @@
 				width: 1px
 				height: 10px
 				bottom: -13px
+				+r(599)
+					left: 5px
 			&::after
 				position: absolute
 				top: 14px
@@ -74,10 +145,14 @@
 				content: ''
 				height: 20px
 				width: 40px
+				+r(599)
+					display: none
 			&.slick-active
 				background-color: $red
 				border-color: $white
 				animation: myFlip 1.2s
+				+r(599)
+					animation: none
 			&:first-child
 				margin-left: -10px
 				span::before, button::after
@@ -86,6 +161,25 @@
 				margin-right: -10px
 				span::after, button::before
 					display: none
+		li:nth-child(1) button
+			left: -8px
+		li:nth-child(2) button
+			left: 20px
+		li:nth-child(3) button
+			left: 47px
+		li:nth-child(4) button
+			left: 75px
+		li:nth-child(5) button
+			left: 102px
+		li:nth-child(6) button
+			left: 132px
+		li:nth-child(7) button,
+		li:nth-child(8) button,
+		li:nth-child(9) button,
+		li:nth-child(10) button,
+		li:nth-child(11) button
+			+r(599)
+				display: none
 		button
 			position: absolute
 			left: -7px
@@ -94,6 +188,8 @@
 			font-weight: 700
 			color: $black
 			background: transparent
+			+r(599)
+				pointer-events: none
 			&::before
 				left: 44px
 				top: -11px
@@ -117,6 +213,24 @@
 				width: 1px
 				height: 10px
 				bottom: -13px
+				+xs
+					display: none
+	&__btn
+		position: absolute
+		padding: 5px
+		bottom: -26px
+		background: transparent
+		&.slick-disabled
+			visibility: hidden
+		&_prev
+			left: 0
+		&_next
+			right: 0
+		&-icon
+			font-size: 38px
+			fill: none
+			stroke: $red
+			
 	.slick-track
 		cursor: default
 		

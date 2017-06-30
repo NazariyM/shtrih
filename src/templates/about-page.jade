@@ -13,6 +13,43 @@ block content
 			+e.IMG(src='img/screen-sld-6.jpg' style='display: block; margin: 0 auto; width: 100%; max-height: 800px')
 		// end screen-slider
 
+		//- benefits
+		-
+			var benefits = {classMod: '_about', title: 'НАШ ОПЫТ — ВАША ГАРАНТИЯ КАЧЕСТВА'};
+			var benefitsList = [{
+			picMod: 'tape',
+			title: '21 год',
+			subTitle: 'в отрасли',
+			descrTop: 'Компания "Штрих.ру"',
+			descrBot: 'на рынке с 1996 года.'
+			},{
+			picMod: 'peoples',
+			title: '83',
+			subTitle: 'специалиста',
+			descrTop: 'Высококвалифицированный и',
+			descrBot: 'компетентный персонал компании'
+			},{
+			picMod: 'building',
+			title: '3',
+			subTitle: 'города',
+			descrTop: 'Мы открыли офисы продаж',
+			descrBot: 'в разных городах'
+			},{
+			picMod: 'vehicle',
+			title: '52 региона',
+			subTitle: 'отгрузки',
+			descrTop: 'Доставляем продкуцию',
+			descrBot: 'по регионам'
+			}
+			,{
+			picMod: 'handshake',
+			title: '967',
+			subTitle: 'компаний',
+			descrTop: 'Работают с нами',
+			descrBot: 'на постоянной основе'
+			}];
+		include components/_benefits
+
 		//- history timeline
 		-var history = {classMod: '_default sect-bg js-next-section', title:'ИСТОРИЯ НАШЕГО УСПЕХА'};
 		include components/_history
