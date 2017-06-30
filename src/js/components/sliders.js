@@ -105,6 +105,7 @@ $categoryLinks.slick({
   arrows: true,
   focusOnSelect: true,
   vertical: true,
+  draggable: false,
   prevArrow: '<button class="category__list-btn category__list-btn_prev" type="button"><svg class="category__list-btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg></button>',
   nextArrow: '<button class="category__list-btn category__list-btn_next" type="button"><svg class="category__list-btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg></button>'
 });
@@ -118,4 +119,31 @@ $categoryView.slick({
   arrows: false,
   draggable: false,
   fade: true
+});
+
+const $benefitsSld = $('.js-benefits-slider');
+$benefitsSld.owlCarousel({
+  items: 4,
+  loop: true,
+  dots: false,
+  nav: true,
+  margin: 30,
+  navText: ['<svg class="owl-carousel__btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg>', '<svg class="owl-carousel__btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg>'],
+  navClass: ['owl-carousel__btn owl-carousel__btn_prev', 'owl-carousel__btn owl-carousel__btn_next']
+});
+
+const $historyTimeline = $('.js-history-timeline');
+$historyTimeline.slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  speed: 1200,
+  infinite: false,
+  dots: true,
+  arrows: false,
+  // dotsSpeed:
+  dotsClass: 'history-timeline__nav',
+  customPaging(slider, i) {
+    const title = $(slider.$slides[i]).data('title');
+    return `<button type="button" class="history-timeline__nav-year">${title}</button>`;
+  }
 });

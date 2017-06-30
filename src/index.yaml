@@ -13,3 +13,7 @@ PageList:
   ready: 100%
 - file: calendars-page.html
   ready: 100%
+- file: polygraphy-page.html
+  ready: 100%
+- file: about-page.html
+  ready: 100%

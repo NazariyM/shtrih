@@ -22,7 +22,6 @@
 			padding: 0 10px 10px
 		&-pic
 			height: 90px
-			margin-bottom: 5px
 			+vertical
 			+sm
 				margin-bottom: 4px
@@ -30,7 +29,6 @@
 				content: ''
 				display: inline-block
 				vertical-align: middle
-				margin: 0 auto
 			&_tape::after
 				margin-bottom: 5px
 				+s('tape')
@@ -62,7 +60,22 @@
 				+s('push-btn')
 			&_cards::after
 				+s('cards')
+			&_equipment::after
+				+s('equipment')
+		&-text
+			margin: 5px 0 0
 				
+		&_horizontal
+			text-align: left
+			+clr
+		&_horizontal &-pic
+			float: left
+			width: 86px
+			margin-right: 14px
+		&_horizontal &-text
+			float: left
+			width: calc(100% - 100px)
+		
 		&-title
 			margin-bottom: 5px
 			font-size: 22px
@@ -79,9 +92,27 @@
 		&-descr
 			font-size: 16px
 			color: $grey
+	&__slider
+		&-item
+			height: 132px
+		.owl-carousel__btn
+			+vertical
+			&_prev
+				left: -40px
+			&_next
+				right: -40px
+			&-icon
+				display: inline-block
+				vertical-align: middle
+				stroke: $grey
+				fill: none
+				font-size: 44px
+				
 	&_default
 		padding: 65px 0 45px
 		+sm
 			padding: 50px 0 10px
 	&_souvenirs
 		padding: 65px 0 63px
+	&_big
+		padding: 65px 0 125px

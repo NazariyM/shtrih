@@ -6,20 +6,22 @@ if benefits ? benefits : benefits = []
 		+b.H3.title-md= benefits.title
 		+e.list
 			mixin benefitsItem(item)
-				+e.item
+				+e.item(class= item.classMod ? item.classMod : '')
 					+e.item-pic(class='_' + item.picMod)
-					+e.item-title= item.title
-					+e.item-sub-title= item.subTitle
-					+e.item-descr
-						+e.P= item.descrTop
-						+e.P= item.descrBot
+					+e.item-text
+						+e.item-title= item.title
+						+e.item-sub-title= item.subTitle
+						+e.item-descr
+							+e.P= item.descrTop
+							if item.descrBot
+								+e.P= item.descrBot
 			each item in benefitsList
 				+benefitsItem(item)
 
-		if benefits.slider
-			+e.slider.js-benefits-slider
+		if benefitSldList
+			+e.slider.js-benefits-slider.owl-carousel
 				for benefitSldItem in benefitSldList
-				+e.slider-item
-					+e.IMG(src='img/content/#{benefitSldItem}.jpg')
+					+e.slider-item
+						+b.IMG.obj-fit(src='img/content/#{benefitSldItem}.jpg')
 
 //end benefits
