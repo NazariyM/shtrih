@@ -62,6 +62,8 @@
 			padding: 25px 0 5px
 	&_aside
 		flex: 0 1 255px
+		+xs
+			flex-basis: 100%
 	&_aside &__container
 		padding: 0
 	&_aside &__list
@@ -69,10 +71,21 @@
 		flex-direction: column
 		padding: 30px 0 0
 		border-top: 1px solid #e6e7e8
+		+xs
+			padding: 20px 0 0
+			flex-direction: row
+			justify-content: center
 	&_aside &__list-item
 		margin: 0 0 16px 0
+		+xs
+			margin: 0 13px 15px
+	&_aside &__list-link
+		+sm
+			font-size: 15px
 	&_aside &__list-item:nth-child(7) ~ &__list-item
 		margin-bottom: 20px
+		+xs
+			margin: 0 13px 15px
 
 /* count
 	----------------------------------- */
@@ -135,12 +148,21 @@
 			width: 100px
 			height: 134px
 			margin-right: 20px
+			+r(599)
+				float: none
 		&-text
 			position: relative
 			float: left
 			width: calc(100% - 120px)
 			padding: 5px 28px 0
 			line-height: 1.4
+			+r(599)
+				float: none
+				width: 100%
+				padding: 5px 5px 0
+			p
+				+xs
+					font-size: 15px
 		&-quote
 			position: absolute
 			fill: #df4d4d
@@ -148,14 +170,19 @@
 			&_l
 				top: 8px
 				left: 0
+				+r(599)
+					left: -8px
 			&_r
 				right: 0
 				bottom: 6px
 		&-rating
 			display: inline-block
+			+r(599)
+				margin-left: 10px
 	&__form
-		&-in
-			padding: 30px 0 0
+		padding: 30px 0 0
+		+r(599)
+			padding: 15px 0 0
 	&__message
 		margin: 7px 0 19px
 		textarea
@@ -165,7 +192,9 @@
 		line-height: 39px
 	&_default
 		margin: 40px 0 20px
-		
+		+xs
+			margin: 30px 0 20px
+
 /* ===================================
 	 quality
 	 =================================== */
