@@ -45,27 +45,3 @@ $textOverflow.dotdotdot();
       .addClass('is-active');
   });
 }());
-
-// (function() {
-//   ymaps.ready(init);
-//   let myMap,
-//     myPlacemark;
-//
-//   function init() {
-//     myMap = new ymaps.Map('map', {
-//       center: [53.20512356452257,50.15898787835692],
-//       zoom: 16,
-//       controls: ['zoomControl']
-//     });
-//     myPlacemark = new ymaps.Placemark([53.205870782919895,50.15905225137328], {
-//       hintContent: 'Самара, ул. Луначарского 92'
-//     }, {
-//       iconLayout: 'default#image',
-//       iconImageHref: '/img/map-marker.png',
-//       iconImageSize: [33, 44],
-//       iconImageOffset: [0, 0]
-//     });
-//     myMap.geoObjects.add(myPlacemark);
-//     myMap.behaviors.disable('scrollZoom');
-//   }
-// }());
