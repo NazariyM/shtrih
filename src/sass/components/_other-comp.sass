@@ -225,11 +225,24 @@
 				margin-bottom: 30px
 			img
 				width: auto
+				+r(424)
+					margin: 0 auto
+		&-btn
+			position: absolute
+			background: transparent
+			&_prev
+				left: 0
+			&_next
+				right: 0
+			&-icon
+				font-size: 42px
+				stroke: $black
+				fill: none
 	&_default
 		padding: 70px 0 155px
 		+sm
 			padding: 60px 0 40px
 		+r(424)
-			display: none
+			padding: 40px 0 20px
 		.next-section
 			bottom: 10%

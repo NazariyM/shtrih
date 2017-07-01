@@ -4,7 +4,7 @@ if clients ? clients : clients = []
 +b.SECTION.clients(class= clients.classMod ? clients.classMod : '')
 	+e.container.container
 		+b.H2.title-md= clients.title
-		+e.list
+		+e.list.js-clients-mob-list
 			-
 				var itemCount = 0
 				imgCount = 1

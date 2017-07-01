@@ -158,3 +158,36 @@ $historyTimeline.slick({
       }
     }]
 });
+(function() {
+  const $clientSld = $('.js-clients-mob-list');
+
+  function initSlider(slider) {
+    initSlickSlider(slider);
+    toggleSlider(424, slider);
+    $(window).resize(() => {
+      toggleSlider(424, slider);
+    });
+
+    function toggleSlider(breakpoint, slider) {
+      if ($(window).width() < breakpoint) {
+        if (!slider.hasClass('slick-initialized')) {
+          initSlickSlider(slider);
+        }
+      } else {
+        slider.slick('unslick');
+      }
+    }
+
+    function initSlickSlider(slider) {
+      slider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button class="clients__list-btn clients__list-btn_prev" type="button"><svg class="clients__list-btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg></button>',
+        nextArrow: '<button class="clients__list-btn clients__list-btn_next" type="button"><svg class="clients__list-btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg></button>'
+      });
+    }
+  }
+
+  initSlider($clientSld);
+}());
