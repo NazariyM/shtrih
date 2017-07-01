@@ -1,0 +1,23 @@
+---
+title: Contacts Page
+---
+extends layouts/_layout
+block header
+	-var headerClass = '_no-slider';
+	include partials/_header
+block content
+	+b.MAIN
+
+		+b.SECTION.contacts
+			+e.container.container
+				+e.col
+					+e.H2.title.title-md Контакты
+					include components/_contact-tabs
+
+				+e.col
+					-var ask = {classMod: '_contact', title: 'Свяжитесь с нами?'};
+					include components/_ask
+
+		//- ask
+		-var ask = {classMod: '_default sect-bg', title: 'Есть, что спросить?', descr: 'Ответим на любые Ваши вопросы'};
+		include components/_ask

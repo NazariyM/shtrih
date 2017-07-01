@@ -1,0 +1,28 @@
+if contacts ? contacts : contacts = []
+
+//begin contact-tabs
++b.contacts-tabs
+	+e.UL.nav.js-tabs-nav
+		+b.LI Москва
+		+b.LI.is-active Самара
+		+b.LI Тольяти
+
+	+e.content
+		+e.ADDRESS.address
+			+e.P.address-str Адрес ул. Маломосковская
+			+e.A.address-tel(href='#!') 928-846 265-81-81
+		+e.address-map
+			+e.address-map-img(style='background-image: url(img/content/map.png)')
+	+e.content.is-active
+		+e.ADDRESS.address
+			+e.P.address-str Адрес ул. Луначарского
+			+e.A.address-tel(href='#!') 928-846 265-80-80
+		+e.address-map#map
+			+e.address-map-img(style='background-image: url(img/content/map.png)')
+	+e.content
+		+e.ADDRESS.address
+			+e.P.address-str Адрес ул. Карла-Маркса
+			+e.A.address-tel(href='#!') 928-846 265-82-82
+		+e.address-map
+			+e.address-map-img(style='background-image: url(img/content/map.png)')
+//end contact-tabs

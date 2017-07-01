@@ -62,6 +62,12 @@
 				+s('cards')
 			&_equipment::after
 				+s('equipment')
+			&_pen-list::after
+				+s('pen-list')
+			&_types::after
+				+s('types')
+			&_paper::after
+				+s('paper')
 		&-text
 			margin: 5px 0 0
 				
@@ -146,6 +152,14 @@
 		padding: 65px 0 63px
 		+sm
 			padding: 45px 0 10px
+	&_polygraph
+		padding: 65px 0 63px
+		+sm
+			padding: 45px 0 10px
+	&_polygraph &__item-descr
+		max-width: 260px
+		margin: 0 auto
+	
 	&_big
 		padding: 65px 0 125px
 		+sm

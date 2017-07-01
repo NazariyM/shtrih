@@ -1,0 +1,92 @@
+.contacts
+	padding: 45px 0 60px
+	+xs
+		padding: 30px 0 40px
+	&__container
+		+clr
+	&__col
+		float: left
+		&:nth-child(1)
+			width: percentage(730 / 1110)
+			margin-right: (30 / 1110 * 100%)
+			+md
+				width: 63%
+				margin-right: 15px
+			+sm
+				float: none
+				width: 100%
+				margin-bottom: 25px
+		&:nth-child(2)
+			width: percentage(350 / 1110)
+			+md
+				width: calc(37% - 15px)
+			+sm
+				float: none
+				width: 100%
+	&__title
+		text-align: left
+		
+.contacts-tabs
+	margin: 20px 0 0
+	&__nav
+		margin-bottom: 25px
+		font-size: 0
+		white-space: nowrap
+		+xs
+			text-align: center
+		li
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding: 0 30px
+			height: 56px
+			line-height: 56px
+			border-radius: 3px
+			border: 2px solid #de4d4f
+			font-size: 14px
+			text-transform: uppercase
+			font-weight: 700
+			text-align: center
+			color: $black
+			cursor: pointer
+			transition: all .3s
+			+xs
+				padding: 0 13px
+			&::after
+				position: absolute
+				left: calc(50% - 10px)
+				bottom: -12px
+				content: ''
+				+arr(17, 10, #de4d4f, b)
+				opacity: 0
+				transition: all .3s
+				pointer-events: none
+			&.is-active
+				background: #de4d4f
+				color: $white
+				&::after
+					opacity: 1
+			&:not(:last-child)
+				margin-right: 10px
+	
+	&__content
+		display: none
+		&.is-active
+			display: block
+	&__address
+		margin-bottom: 15px
+		font-style: normal
+		font-size: 18px
+		line-height: 30px
+		&-tel
+			font-weight: 500
+		&-map
+			position: relative
+			height: 400px
+			width: 100%
+			overflow: hidden
+			border-radius: 4px
+			&-img
+				+coverdiv
+				+cover
+				
