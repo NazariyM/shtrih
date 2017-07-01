@@ -124,13 +124,28 @@ $categoryView.slick({
 
 const $benefitsSld = $('.js-benefits-slider');
 $benefitsSld.owlCarousel({
-  items: 4,
   loop: true,
   dots: false,
   nav: true,
-  margin: 30,
   navText: ['<svg class="owl-carousel__btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg>', '<svg class="owl-carousel__btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg>'],
-  navClass: ['owl-carousel__btn owl-carousel__btn_prev', 'owl-carousel__btn owl-carousel__btn_next']
+  navClass: ['owl-carousel__btn owl-carousel__btn_prev', 'owl-carousel__btn owl-carousel__btn_next'],
+  responsive: {
+    0: {
+      items: 1
+    },
+    767: {
+      items: 2,
+      margin: 30
+    },
+    1023: {
+      items: 3,
+      margin: 30
+    },
+    1219: {
+      items: 4,
+      margin: 30
+    }
+  }
 });
 
 const $historyTimeline = $('.js-history-timeline');

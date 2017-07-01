@@ -68,13 +68,23 @@
 		&_horizontal
 			text-align: left
 			+clr
+			+md
+				padding: 0 7px 25px
+			+sm
+				width: 50%
+			+xs
+				width: 100%
 		&_horizontal &-pic
 			float: left
 			width: 86px
 			margin-right: 14px
+			+md
+				margin-right: 5px
 		&_horizontal &-text
 			float: left
 			width: calc(100% - 100px)
+			+md
+				width: calc(100% - 92px)
 		
 		&-title
 			margin-bottom: 5px
@@ -101,14 +111,26 @@
 				+md
 					display: inline
 	&__slider
+		+r(1219)
+			max-width: 840px
+			margin: 0 auto
+		+sm
+			max-width: 600px
+		+xs
+			max-width: 400px
+			padding: 0 20px
 		&-item
 			height: 132px
 		.owl-carousel__btn
 			+vertical
 			&_prev
 				left: -40px
+				+xs
+					left: -5px
 			&_next
 				right: -40px
+				+xs
+					right: -5px
 			&-icon
 				display: inline-block
 				vertical-align: middle
@@ -122,8 +144,17 @@
 			padding: 50px 0 10px
 	&_souvenirs
 		padding: 65px 0 63px
+		+sm
+			padding: 45px 0 10px
 	&_big
 		padding: 65px 0 125px
+		+sm
+			padding: 50px 0 70px
+		+xs
+			padding: 40px 0 50px
+	&_big &__list
+		+md
+			margin: 40px 0 15px
 	&_about
 		padding: 65px 0 20px
 	&_about &__list

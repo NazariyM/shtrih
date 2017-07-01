@@ -20,10 +20,10 @@ if benefits ? benefits : benefits = []
 			each item in benefitsList
 				+benefitsItem(item)
 
-		if benefitSldList
+		if benefits.slider
 			+e.slider.js-benefits-slider.owl-carousel
-				for benefitSldItem in benefitSldList
+				for benefitsSldItem in benefitsSldList
 					+e.slider-item
-						+b.IMG.obj-fit(src='img/content/#{benefitSldItem}.jpg')
+						+b.IMG.obj-fit(src='img/content/#{benefitsSldItem}.jpg')
 
 //end benefits
