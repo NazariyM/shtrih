@@ -23,7 +23,8 @@ $teamSld.owlCarousel({
       items: 1
     },
     419: {
-      items: 2
+      items: 2,
+      margin: 15
     },
     767: {
       items: 2
@@ -154,9 +155,6 @@ $historyTimeline.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true
-      //   arrows: true,
-      //   prevArrow: '<button class="history-timeline__btn history-timeline__btn_prev" type="button"><svg class="history-timeline__btn-icon icon-sld-arr_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_l"></use></svg></button>',
-      //   nextArrow: '<button class="history-timeline__btn history-timeline__btn_next" type="button"><svg class="history-timeline__btn-icon icon-sld-arr_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-sld-arr_r"></use></svg></button>'
       }
     }]
 });
