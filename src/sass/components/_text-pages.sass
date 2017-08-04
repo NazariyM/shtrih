@@ -1,0 +1,221 @@
+/* ===================================
+	 .text-block
+	 =================================== */
+.text-block
+	padding: 50px 0 70px
+	+xs
+		padding: 25px 0 35px
+	p
+		line-height: 30px
+		+xs
+			font-size: 15px
+			line-height: 24px
+	&__title
+		+xs
+			font-size: 21px
+			margin: 0 -5px
+	&__inner
+		margin: 18px 0 0
+	&__list
+		margin: 10px 0
+		+xs
+			font-size: 15px
+		&:last-of-type
+			margin: 10px 0 20px
+		&-title
+			font-weight: 700
+			line-height: 30px
+			font-size: 16px
+		ul
+			li
+				position: relative
+				padding-left: 15px
+				&:not(:first-child)
+					margin-top: 8px
+			svg
+				position: absolute
+				top: 6px
+				left: 0
+				font-size: 10px
+				
+/* ===================================
+	 order-steps
+	 =================================== */
+.order-steps
+	padding: 60px 0
+	+sm
+		padding: 45px 0
+	&__inner
+		margin: 22px -15px 0
+		font-size: 0
+		+md
+			margin: 22px -10px 0
+		+sm
+			margin: 20px -5px 0
+		+xs
+			margin: 20px 0 0
+	&__block
+		display: inline-block
+		vertical-align: top
+		position: relative
+		width: calc(50% - 30px)
+		margin: 0 15px 0
+		padding: 19px 32px 22px
+		background: #fff
+		border: 1px solid #e6e7e8
+		font-size: 15px
+		line-height: 25px
+		+md
+			width: calc(50% - 20px)
+			margin: 0 10px
+		+sm
+			width: calc(50% - 10px)
+			margin: 0 5px
+			padding: 19px 20px 22px
+		+xs
+			width: 100%
+			margin: 0
+		&::after, &::before
+			+xs
+				display: none
+		&:not(:last-child)
+			margin-bottom: 30px
+			+xs
+				margin-bottom: 20px
+		&:nth-child(2)
+			margin-top: 70px
+			+sm
+				min-height: 280px
+			+xs
+				min-height: 0
+				margin-top: 0
+			&::after
+				position: absolute
+				top: -25.6%
+				left: -5%
+				width: 76px
+				height: 47px
+				content: ''
+				background: url("../img/bg/dot-decor_l.png") 50% 50%/cover
+				+md
+					top: -22.6%
+					left: -4%
+				+sm
+					top: -17.8%
+					left: -3%
+		&:nth-child(3)
+			margin-top: -20px
+			+sm
+				min-height: 254px
+			+xs
+				min-height: 0
+				margin-top: 0
+			&::before
+				position: absolute
+				top: -10.3%
+				right: -5%
+				width: 70px
+				height: 18px
+				content: ''
+				background: url("../img/bg/dot-decor_r.png") 50% 50%/cover
+				+md
+					top: -9.4%
+					right: -4%
+				+sm
+					top: -7.7%
+					right: -3%
+			&::after
+				position: absolute
+				right: -5%
+				bottom: -36.3%
+				width: 47px
+				height: 76px
+				content: ''
+				background: url("../img/bg/dot-decor_up.png") 50% 50%/cover
+				+sm
+					bottom: -30.9%
+		&:nth-child(4)
+			+sm
+				min-height: 364px
+			+xs
+				min-height: 0
+		&-title
+			margin-bottom: 8px
+			color: #000
+			font-size: 22px
+			font-weight: 500
+			+xs
+				font-size: 20px
+			span
+				font-size: 30px
+				font-weight: 900
+				color: #d62326
+				+xs
+					font-size: 20px
+		&-list
+			&-bold
+				font-weight: 700
+				
+/* ===================================
+	 thanks
+	 =================================== */
+.thanks
+	padding: 60px 0
+	+xs
+		padding: 40px 0
+	&__inner
+		margin: 22px 0 0
+	&__block
+		display: flex
+		align-items: center
+		padding: 30px 30px 25px
+		border: 1px solid #e6e7e8
+		background-color: #fff
+		line-height: 30px
+		+sm
+			padding: 25px 20px 25px
+			line-height: 26px
+		+xs
+			flex-wrap: wrap
+			justify-content: center
+			padding: 25px 10px
+		&:not(:first-child)
+			margin-top: 30px
+			+sm
+				margin-top: 15px
+		&-img
+			flex: 0 0 140px
+			+xs
+				flex: 0 1 auto
+		&-text
+			padding: 0 40px 0 52px
+			position: relative
+			flex: 1 1 auto
+			+sm
+				padding: 0 5px 0 30px
+			+xs
+				margin: 15px 0 0
+				padding: 3px 0
+				font-size: 15px
+		&-quote
+			position: absolute
+			fill: #df4d4d
+			font-size: 14px
+			&_l
+				top: 5px
+				left: 18px
+				+sm
+					top: 0
+					left: 5px
+				+xs
+					top: -15px
+					left: 0
+			&_r
+				right: 1px
+				bottom: 10px
+				+sm
+					bottom: 2px
+					right: -10px
+				+xs
+					bottom: -15px
+					right: -5px

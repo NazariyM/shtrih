@@ -19,3 +19,9 @@ PageList:
   ready: 100%
 - file: contacts-page.html
   ready: 100%
+- file: tesktovaya-1-page.html
+  ready: 100%
+- file: tesktovaya-2-page.html
+  ready: 100%
+- file: tesktovaya-3-page.html
+  ready: 100%

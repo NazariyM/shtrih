@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <!--BEGIN header-->
+    <!--begin header-->
     <header class="header header_no-slider"><button type="button" class="nav-toggle js-nav-toggle"><span class="nav-toggle__icon"></span></button>
       <div class="header__container container">
         <div class="header__col"><a href="#!" class="header__logo"></a>
@@ -33,7 +33,7 @@
         </div>
       </div>
     </header>
-    <!--END header-->
+    <!--end header-->
     <main role="main">
       <section class="contacts">
         <div class="contacts__container container">
@@ -154,29 +154,6 @@
     <!-- end footer-->
     <!--LOAD SCRIPTS-->
     <script type="text/javascript" src="js/app.js"></script>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
-      ymaps.ready(init);
-      var myMap, myPlacemark;
-
-      function init(){
-        myMap = new ymaps.Map ("map", {
-          center: [53.20512356452257,50.15898787835692],
-          zoom: 16,
-          controls: ['zoomControl']
-        });
-        myPlacemark = new ymaps.Placemark([53.205870782919895,50.15905225137328], {
-          hintContent: 'Самара, ул. Луначарского 92'
-        },{
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-marker.png',
-          iconImageSize: [33, 44],
-          iconImageOffset: [0, 0]
-        });
-        myMap.geoObjects.add(myPlacemark);
-        myMap.behaviors.disable('scrollZoom');
-      }
-    </script>
   </body>
 
 </html>

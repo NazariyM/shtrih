@@ -1,0 +1,41 @@
+---
+title: Текстовая
+---
+extends layouts/_layout
+
+block header
+	include partials/_header
+
+block content
+	+b.MAIN
+		+b.SECTION.thanks
+			+e.container.container
+				+b.H2.title-md КАК ОФОРМИТЬ ЗАКАЗ
+				+e.inner
+					+e.block
+						+e.block-img
+							+b.IMG.obj-fit(src='img/content/thanks_img.jpg' alt='img')
+						+e.block-text
+							+e.P Филиал «Московский» ООО "Региональный Банк Инвестиций" выражает благодарность компании "Штрих Ру" за плодотворное сотрудничество и своевременное выполнение всехработ. Мы благодарны Вам за понимание наших потребностей и решение наших непростых задач. Отдельно хотим отметить отменное качество продукции и индивидуальный подход к клиенту. Уверены, что наше дальнейшее сотрудничество будет таким же результативным и плодотворным. Желаем Вам дальнейшего процветания роста!
+							+e.P
+								+e.STRONG ООО Региональный Банк Инвестиций
+							+icon('icon-quote_l', 'thanks__block-quote thanks__block-quote_l')
+							+icon('icon-quote_r', 'thanks__block-quote thanks__block-quote_r')
+
+					+e.block
+						+e.block-img
+							+b.IMG.obj-fit(src='img/content/thanks_img.jpg' alt='img')
+						+e.block-text
+							+e.P Филиал «Московский» ООО "Региональный Банк Инвестиций" выражает благодарность компании "Штрих Ру" за плодотворное сотрудничество и своевременное выполнение всехработ. Мы благодарны Вам за понимание наших потребностей и решение наших непростых задач. Отдельно хотим отметить отменное качество продукции и индивидуальный подход к клиенту. Уверены, что наше дальнейшее сотрудничество будет таким же результативным и плодотворным. Желаем Вам дальнейшего процветания роста!
+							+e.P
+								+e.STRONG ООО Региональный Банк Инвестиций
+							+icon('icon-quote_l', 'thanks__block-quote thanks__block-quote_l')
+							+icon('icon-quote_r', 'thanks__block-quote thanks__block-quote_r')
+
+		//- ask
+		-
+			var ask = {
+			classMod: '_default sect-bg',
+			title: 'Есть, что спросить?',
+			descr: 'Ответим на любые Ваши вопросы'}
+		include components/_ask
